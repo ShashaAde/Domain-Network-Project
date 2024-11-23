@@ -29,49 +29,68 @@ The objective of this project is to integrate and expand the networks of three m
   
 ## Steps
 
-•	Set up multiple servers through VMs, including Windows Server 2019, Windows Pro, Ubuntu, and Ubuntu Server.
--	Downloaded a ISO file for each OS to be assigned to a VM
--	Specified a set amount of memory and cores to be assigned to each VM
--	Went through and fully installed each OS while completing the accounts setup required
+## Virtual Machine Installation and Operating Systems Setup
 
-•	Set up the domain by configuring the Windows Server 2019.
-- Added a static IP address to the host while making the primary DNS IP address the same address, to be able to promote the server to Domain
--	Installed Active Directory Domain Service with its roles and features through the server role setup
--	Installed DNS server through the server role setup
--	Created a root domain name to promote the server to a Windows Domain controller
+### Windows Server 2019 Setup
+  ![Screenshot 2024-11-23 182357](https://github.com/user-attachments/assets/14286d57-5b24-410f-9320-c23a6e9f58b8)
+  
+  ![Screenshot 2024-11-23 172302](https://github.com/user-attachments/assets/84713e12-d589-4b8a-a10b-448862247b45)
+  
+  ![Screenshot 2024-11-23 172701](https://github.com/user-attachments/assets/404af2d2-2076-40aa-829d-41928e2fb2a7)
+  
+  ![Screenshot 2024-11-23 172719](https://github.com/user-attachments/assets/8fb8627d-4b5f-48c2-83c7-6719c5f6984e)
+  
+  ![Screenshot 2024-11-23 174231](https://github.com/user-attachments/assets/8b8d4a25-fb4f-4312-a338-a265639bc5d9)
+  
+  ![Screenshot 2024-11-23 174355](https://github.com/user-attachments/assets/93984941-1fe0-4cef-b919-b0d1ba7e0fff)
+  
+  ![Screenshot 2024-11-23 174444](https://github.com/user-attachments/assets/8bedcf7b-77f5-4ec8-acc6-66ff5923778e)
+  
+  ![Screenshot 2024-11-23 174539](https://github.com/user-attachments/assets/49fc3eb7-abdf-4e0f-8c9e-6a4b842238c1)
 
-•	Used network topology, commands, and concepts to connect each VM to the domain.
--	Used ipconfig/ifconfig to get the Ips of each system
--	Created forward and reverse lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain
--	Used ping to test if the domain was able to reach the systems and vice versa
--	Joined Windows Pro system to the domain through it systems properties
- 
--	Changed the Ubuntu system’s hostname to the domain name and installed realmd package on the system to join it to my domain
+### Windows 10 Pro (Workstation) Setup
+  ![Screenshot 2024-11-23 180354](https://github.com/user-attachments/assets/1471993e-ef37-4b0c-a988-4471e3aba989)
+  
+  ![Screenshot 2024-11-23 180457](https://github.com/user-attachments/assets/7b4b4dfa-cc1e-4e85-9631-878f8fd4fd7a)
+  
+  ![Screenshot 2024-11-23 180513](https://github.com/user-attachments/assets/b6778fa8-16fa-4b9b-87ed-65092ed1b33a)
+  
+  ![Screenshot 2024-11-23 181254](https://github.com/user-attachments/assets/d35d2ef7-2d17-4674-90c7-d9b8c10823d5)
+  
+  ![Screenshot 2024-11-23 181438](https://github.com/user-attachments/assets/03084196-5a90-4bd1-b047-37d3d82ae8c4)
+  
+  ![Screenshot 2024-11-23 181531](https://github.com/user-attachments/assets/d0d4afcd-c138-425d-9f60-71db056c0681)
+  
+  ![Screenshot 2024-11-23 181554](https://github.com/user-attachments/assets/fb14bbf5-78d3-4cd3-9209-dfcf6e462b18)
+  
+  ![Screenshot 2024-11-23 182845](https://github.com/user-attachments/assets/27f4adfa-a8ef-4b38-85d5-bf80ea3463e5)
+  
+  ![Screenshot 2024-11-23 183107](https://github.com/user-attachments/assets/fc7f3e1c-3eca-4ecb-aa20-686ec5d4ccff)
 
-•	Set up remote desktop to gain remote access to my Windows Pro system from the Windows Domain.
+### Ubuntu Server Setup
+  ![Screenshot 2024-11-23 174653](https://github.com/user-attachments/assets/f904ec06-e32a-4dea-9708-4ae51806eeab)
+  
+  ![Screenshot 2024-11-23 174741](https://github.com/user-attachments/assets/b64023a9-cec9-4e84-a98f-c288bb6392e9)
+  
+  ![Screenshot 2024-11-23 175433](https://github.com/user-attachments/assets/324fee11-7af6-4857-a1ba-e0f78bd85cfb)
+  
+  ![Screenshot 2024-11-23 180805](https://github.com/user-attachments/assets/280e6faa-146a-4d93-8443-7d0dd60bc79f)
+  
+  ![Screenshot 2024-11-23 180952](https://github.com/user-attachments/assets/3c16a7a7-a94d-471d-978a-f7458c96f317)
+  
+  ![Screenshot 2024-11-23 181033](https://github.com/user-attachments/assets/7f5efe43-17ac-49c4-a2d0-030d8675ffc8)
+  
+  ![Screenshot 2024-11-23 181121](https://github.com/user-attachments/assets/db5d4064-0a40-4c88-bc6b-3af1c19bede4)
 
-•	Setup SSH to gain remote access from my Window domain into the Ubuntu client and server and vice versa.
+### Ubuntu Setup
+  ![Screenshot 2024-11-23 175054](https://github.com/user-attachments/assets/d9bd9c96-d768-40e8-8b29-909d4521990f)
+  
+  ![Screenshot 2024-11-23 175154](https://github.com/user-attachments/assets/6f6d0c20-f566-4661-87c2-84b5a0ddeb32)
+  
+  ![Screenshot 2024-11-23 175218](https://github.com/user-attachments/assets/ff3c729c-830d-4809-a84c-4d8096f8ed8d)
+  
+  ![Screenshot 2024-11-23 175613](https://github.com/user-attachments/assets/3c3fc66f-d621-4055-845a-ad0dd6111ab6)
+  
+  ![Screenshot 2024-11-23 180151](https://github.com/user-attachments/assets/1330af93-9df2-47b3-9291-d22f8fe02645)
 
-•	Set up multiple accounts on a Windows Pro system through the Window Domain.
--	Created and organized unit with sub-organized units of containing different departments of a company
--	Created users in each of the sub-organized units and grouped them based on their department using security groups
-
-•	Used active directory and group policies to manage the Window Domain.
--	Created a group policy through account policies in the security settings to limit the character length of a password to 12 minimum for users on the Windows Pro system
--	Created a group policy through software restriction policies in the security settings to restrict all users in the company form opening internet explorer
-
-•	Used group policies for network file share to make a secure drive-map for the domain controller and departments within the organization to share files.
--	Created a drive map trough group policy to allow two distinct departments to share files with each other
-
-•	Created a webpage by setting up WordPress with Linux.
--	Downloaded databases, Apache and WordPress packages onto the Ubuntu system
--	Created a database for WordPress setup configuration
--	Installed WordPress and accessed the account through my Ubuntu’s public Ip address
-
-•	Created an Ubuntu server for system logging of the domain server with syslog.
--	Configured syslog in the Ubuntu server to run under the UDP syslog port
--	Configured syslog in the Ubuntu server to save the domain controller logs in a specified path while displaying it by hostname and program
--	Configured syslog in the Ubuntu client to find the location of the server, to send its log messages from the domain controller to the Ubuntu server
-
-•	Made a bash script to search through logs to find logs for the domain controller and sudo logins on the Linux devices.
 
