@@ -17,8 +17,16 @@ The objective of this project is to integrate and expand the networks of three m
 ### Services/Tools Used
 - Cisco Packet Tracer to map out the logical layout of my network
 - Wordpress to setup a online market place thorugh a LAMP server
-- VMware
-
+- VMware to set up the servers and workstations
+- Created domain and DNS zones for the VMs.
+- Used tools (ipconfig/ifconfig, ping) to assign IPs and test connectivity.
+- Enabled RDP for remote access to Windows Pro.
+- Set up SSH for remote access to Ubuntu systems.
+- Created users and organized them into groups based on departments.
+- Applied policies to manage security settings and restrictions.
+- Installed WordPress on Ubuntu with Apache and MySQL.
+- Wrote a script to search logs for specific domain and login activities.
+  
 ## Steps
 drag & drop screenshots here or use imgur and reference them using imgsrc
 
