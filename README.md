@@ -33,20 +33,16 @@ The objective of this project is to integrate and expand the networks of three m
 -	Downloaded a ISO file for each OS to be assigned to a VM
 -	Specified a set amount of memory and cores to be assigned to each VM
 -	Went through and fully installed each OS while completing the accounts setup required
-![Screenshot 2024-11-23 021102](https://github.com/user-attachments/assets/452303b9-fe0c-482f-850c-3165d9e3a23d)
 
 •	Set up the domain by configuring the Windows Server 2019.
 - Added a static IP address to the host while making the primary DNS IP address the same address, to be able to promote the server to Domain
 -	Installed Active Directory Domain Service with its roles and features through the server role setup
 -	Installed DNS server through the server role setup
-![Screenshot 2024-11-23 021712](https://github.com/user-attachments/assets/687c6e1d-f9cd-4b03-9032-9b4d08cc385e)
 -	Created a root domain name to promote the server to a Windows Domain controller
-![Screenshot 2024-11-23 025446](https://github.com/user-attachments/assets/5ae16196-569f-45f3-bc0d-50aa3fb24d5e)
 
 •	Used network topology, commands, and concepts to connect each VM to the domain.
 -	Used ipconfig/ifconfig to get the Ips of each system
 -	Created forward and reverse lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain
-![Screenshot 2024-11-23 032453](https://github.com/user-attachments/assets/be9eab4a-13f9-4a6e-ae41-a821b30ad9ee)
 -	Used ping to test if the domain was able to reach the systems and vice versa
 -	Joined Windows Pro system to the domain through it systems properties
  
