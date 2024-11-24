@@ -209,6 +209,12 @@ Allocated memory, and assigned processor cores to the virtual machine.
     ```
     sudo apt install net-tools
 
+### Joining my Ubuntu desktop to the Domain 
+
+![Screenshot 2024-11-23 234707](https://github.com/user-attachments/assets/efc38c49-f81e-42a8-95b0-d2d438cc068b)
+
+Added my domain IP as the DNS Server address for my Ubuntu desktop.
+
  ### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
  ![Screenshot 2024-11-23 215517](https://github.com/user-attachments/assets/1faa15e7-c699-47cd-94aa-888987457e36)
 
@@ -272,7 +278,7 @@ A problem I am running into right now is that my workstation can reach my domain
   
 ![Screenshot 2024-11-23 231808](https://github.com/user-attachments/assets/34ba4c14-35f5-4b6c-9915-e3b5ff3d9219)
 
-To solve this problem, I made a Inbound Protocol  ICMPv4 rule , to allow incomming ping requests from all IPs.
+To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incomming ping requests from all IPs.
 - I was then able to ping the workstation.
 
 
