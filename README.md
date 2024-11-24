@@ -227,7 +227,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
 ![Screenshot 2024-11-23 222039](https://github.com/user-attachments/assets/56d16158-b825-4b1b-9b09-5a6e2ce5a441)
 
-Added a new host (Workstation) to resolve a name to its IP.
+Added a new host (PW) to resolve a name to its IP.
 - I did the same for the Ubuntu desktop & server.
 
  ### Created reverse lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
@@ -238,15 +238,20 @@ Added a new host (Workstation) to resolve a name to its IP.
 
  Created a new Zone.
  - Made sure the new Zone was a Primary zone.
- - Chose IPv4Reverse Lookup Zone
+ - Chose IPv4Reverse Lookup Zone.
 
 ![Screenshot 2024-11-23 223425](https://github.com/user-attachments/assets/f96456cc-cd26-4027-8015-570f1daf5363)
 
-Provided my Network ID 
+Provided my Network ID.
 
 ![Screenshot 2024-11-23 223651](https://github.com/user-attachments/assets/bee9a233-91e0-4a54-9971-94b5e20382a2)
 
-This is the result of the new Zone (reverse)
+This is the result of the new Zone (reverse).
+
+![Screenshot 2024-11-23 224147](https://github.com/user-attachments/assets/a4436a9e-6dd0-44fa-8cb5-3dfb440bd25c)
+
+Added a new Pointer for PW to resolve a IP to its name.
+- I did the same for the Ubuntu desktop & server.
 
 
    
