@@ -201,7 +201,11 @@ Allocated memory, and assigned processor cores to the virtual machine.
     
   ![Screenshot 2024-11-23 212225](https://github.com/user-attachments/assets/d1d3c307-542e-4eb6-840e-c4e3add71ca1)
   The server has now been promoted. 
-
+  
+## Used network topology, commands, and concepts to connect each VM to the domain.
+  Used ipconfig/ifconfig to get the Ips of each virtual machine.
+  ### Created forward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
+  
     
 
 
