@@ -130,7 +130,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
   
   ![Screenshot 2024-11-23 181033](https://github.com/user-attachments/assets/7f5efe43-17ac-49c4-a2d0-030d8675ffc8)
 
-  Installed OpenSSH server package into the server to allow SSH to remote machines
+  Installed OpenSSH server package into the server to allow SSH to remote machines.
   
   ![Screenshot 2024-11-23 181121](https://github.com/user-attachments/assets/db5d4064-0a40-4c88-bc6b-3af1c19bede4)
 
@@ -205,9 +205,51 @@ Allocated memory, and assigned processor cores to the virtual machine.
   
 ## Used network topology, commands, and concepts to connect each VM to the domain.
   Used ipconfig/ifconfig to get the Ips of each virtual machine.
-  ### Created forward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
-  
-    
+  - Used sudo to install net-tools for Ubuntu desktop & server.
+    ```
+    sudo apt install net-tools
+
+ ### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
+ ![Screenshot 2024-11-23 215517](https://github.com/user-attachments/assets/1faa15e7-c699-47cd-94aa-888987457e36)
+
+ Accessed the DNS Manager thorugh the tools section of the Server Manager.
+ 
+ ![Screenshot 2024-11-23 215951](https://github.com/user-attachments/assets/4d2b3342-33c9-40b6-ab22-319be5640f39)
+
+ Created a new Zone.
+ - Made sure the new Zone was a Primary zone.
+ - Assigned a name (portfolio.com) to the zone.
+   
+![Screenshot 2024-11-23 220609](https://github.com/user-attachments/assets/dd45a557-9812-4366-9f25-cab111b796f8)
+
+
+ This the result of the new Zone (forward). 
+
+![Screenshot 2024-11-23 222039](https://github.com/user-attachments/assets/56d16158-b825-4b1b-9b09-5a6e2ce5a441)
+
+Added a new host (Workstation) to resolve a name to its IP.
+- I did the same for the Ubuntu desktop & server.
+
+ ### Created reverse lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
+
+  Accessed the DNS Manager thorugh the tools section of the Server Manager.
+ 
+![Screenshot 2024-11-23 222719](https://github.com/user-attachments/assets/d9cf1e96-a94e-422b-8b4c-1e6dc622445a)
+
+ Created a new Zone.
+ - Made sure the new Zone was a Primary zone.
+ - Chose IPv4Reverse Lookup Zone
+
+![Screenshot 2024-11-23 223425](https://github.com/user-attachments/assets/f96456cc-cd26-4027-8015-570f1daf5363)
+
+Provided my Network ID 
+
+![Screenshot 2024-11-23 223651](https://github.com/user-attachments/assets/bee9a233-91e0-4a54-9971-94b5e20382a2)
+
+This is the result of the new Zone (reverse)
+
+
+   
 
 
 
