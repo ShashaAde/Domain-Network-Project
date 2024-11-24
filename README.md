@@ -228,7 +228,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 ![Screenshot 2024-11-23 222039](https://github.com/user-attachments/assets/56d16158-b825-4b1b-9b09-5a6e2ce5a441)
 
 Added a new host (PW) to resolve a name to its IP.
-- I did the same for the Ubuntu desktop & server.
+- I did the same for the Domain, Ubuntu desktop and Ubuntu server.
 
  ### Created reverse lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
 
@@ -251,16 +251,30 @@ This is the result of the new Zone (reverse).
 ![Screenshot 2024-11-23 224147](https://github.com/user-attachments/assets/a4436a9e-6dd0-44fa-8cb5-3dfb440bd25c)
 
 Added a new Pointer for PW to resolve a IP to its name.
-- I did the same for the Ubuntu desktop & server.
+- I did the same for the Domain, Ubuntu desktop and Ubuntu server.
 
 ### Results and Testing 
 ![Screenshot 2024-11-23 224658](https://github.com/user-attachments/assets/1e5d1a06-737d-495e-b83d-d491577712b8)
 
-This is the result of the foward lookup zone
+![Screenshot 2024-11-23 232820](https://github.com/user-attachments/assets/bc875524-1700-484b-8054-58574edd2c6e)
+
+This is the result of the forward lookup zone.
 
 ![Screenshot 2024-11-23 224716](https://github.com/user-attachments/assets/96995709-9dd1-465a-9cd0-022e8519a8b4)
 
-This is the result of the reverse lookup zone
+![Screenshot 2024-11-23 233116](https://github.com/user-attachments/assets/71e59ea1-f813-4369-9aa7-be4c574360d1)
+
+This is the result of the reverse lookup zone.
+
+A problem I am running into right now is that my workstation can reach my domain, but my domain can't find the workstaion.
+- I then tried my Ubuntu desktop virtual machine and my domain was able to find it. 
+- I trouble shooted this problem by turning off the workstations firewall, and that let me know were to find a solution.
+  
+![Screenshot 2024-11-23 231808](https://github.com/user-attachments/assets/34ba4c14-35f5-4b6c-9915-e3b5ff3d9219)
+
+To solve this problem, I made a Inbound Protocol  ICMPv4 rule , to allow incomming ping requests from all IPs.
+- I was then able to ping the workstation.
+
 
 
    
