@@ -161,10 +161,29 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
 ## Configuring Windows Server 2019 to a domain 
   ### Careating an Active Directory domain
-  
+  ![Screenshot 2024-11-23 203245](https://github.com/user-attachments/assets/d2ef6cf6-66eb-4d90-aaea-6ebe74aca145)
+
   Used the command line to find my network settings and configuration
 
+  ![Screenshot 2024-11-23 204956](https://github.com/user-attachments/assets/2a54c1ec-087e-428a-8061-018e0a31dedb)
 
+  Added a static IP addres with the alternate DNS server addres being the same, to allow this host to be promoted to Domain. 
+
+  ![Screenshot 2024-11-23 205447](https://github.com/user-attachments/assets/d73e319c-b2fa-4bc4-b2b3-c902f5ff1670)
+
+  Manage my server to install roles and features as role based.
+
+  ![Screenshot 2024-11-23 205534](https://github.com/user-attachments/assets/6c7a9042-042c-466e-a9bf-b4413bd2efe7)
+
+  Added AD Domain Services and DNS Server roles to the server.
+
+  ![Screenshot 2024-11-23 205558](https://github.com/user-attachments/assets/6c10bc20-d2af-47ec-98ff-65c8ce243982)
+
+  Doubble checked to make sure Group Policy Managment features were still selected.
+
+  ![Screenshot 2024-11-23 205701](https://github.com/user-attachments/assets/824396b3-5686-4291-8abf-e768a9ef000b)
+
+  Installed the roles and features that I selected. 
 
 
 
