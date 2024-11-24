@@ -184,6 +184,21 @@ Allocated memory, and assigned processor cores to the virtual machine.
   ![Screenshot 2024-11-23 205701](https://github.com/user-attachments/assets/824396b3-5686-4291-8abf-e768a9ef000b)
 
   Installed the roles and features that I selected. 
+  
+  ![Screenshot 2024-11-23 210525](https://github.com/user-attachments/assets/3a00963c-691c-45b5-b533-7bf153dba514)
+
+  After deploying the AD Domain Services I am now able to promote the server to a domain controller.
+  
+  ![Screenshot 2024-11-23 210938](https://github.com/user-attachments/assets/23541d1a-511f-428b-9ea7-02e0247684fc)
+
+  Giving the domain (under a new forest) a root name with the .local naming convention.
+
+  ![Screenshot 2024-11-23 211319](https://github.com/user-attachments/assets/f3cf5889-943a-413b-8917-949734ba5c68)
+
+  Left the rest of the settings as default when proceding with the domain promoiton.
+    - Allowed the promotion operation to complete.
+
+  
 
 
 
