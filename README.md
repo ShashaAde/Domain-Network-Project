@@ -317,7 +317,11 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   ![Screenshot 2024-11-24 022432](https://github.com/user-attachments/assets/3bdf33ee-b355-4051-ad2d-c97f1d2b6fc7)
 
-  - Changed the workstation's name and domain through System Properties in Windows Settings. 
+  - Changed the workstation's name and domain through System Properties in Windows Settings.
+
+  ![Screenshot 2024-11-24 022959](https://github.com/user-attachments/assets/92ee8194-6104-463f-ab5b-ab6c7980daba)
+
+  - Joined the workstation to the domain. 
 
 ### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
  ![Screenshot 2024-11-23 215517](https://github.com/user-attachments/assets/1faa15e7-c699-47cd-94aa-888987457e36)
