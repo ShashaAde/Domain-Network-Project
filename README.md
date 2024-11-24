@@ -161,6 +161,8 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
 ## Configuring Windows Server 2019 to a domain 
   ### Careating an Active Directory domain
+  
+  Used the command line to find my network settings and configuration
 
 
 
