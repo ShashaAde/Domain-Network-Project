@@ -134,11 +134,21 @@ Allocated memory, and assigned processor cores to the virtual machine.
   Installed the operating system with the setting preferences that I chose.
 
 ### Ubuntu Setup
+  ![Screenshot 2024-11-23 200344](https://github.com/user-attachments/assets/9f319339-32f7-4cd1-abca-5cfe5fc0745c)
+
+  Selected the Ubuntu ISO file for installation into the Virtual Machine set aside for my worksations.  
+
   ![Screenshot 2024-11-23 175054](https://github.com/user-attachments/assets/d9bd9c96-d768-40e8-8b29-909d4521990f)
+
+  Set up a user that would be used to install the operating system.
   
   ![Screenshot 2024-11-23 175154](https://github.com/user-attachments/assets/6f6d0c20-f566-4661-87c2-84b5a0ddeb32)
+
+  Installed the virtual machine with customized settings to my liking.
   
   ![Screenshot 2024-11-23 175218](https://github.com/user-attachments/assets/ff3c729c-830d-4809-a84c-4d8096f8ed8d)
+
+  
   
   ![Screenshot 2024-11-23 175613](https://github.com/user-attachments/assets/3c3fc66f-d621-4055-845a-ad0dd6111ab6)
   
