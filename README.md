@@ -215,6 +215,25 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
 Added my domain IP as the DNS Server address for my Ubuntu desktop.
 
+sudo service NetworkManager restart
+
+sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
+
+-Installed realmd packages that allow my Ubuntu desktop to connect to my domain controller.
+
+hostnamectl set-hostname ubuntu.portfolio.local
+
+-Changed the host name on my Ubuntu desktop.
+
+systemctl disable systemd-resolved.service
+systemctl stop systemd-resolved.service
+
+-Disableing the systemd resolve service, so our domain server can resolve the DNS. 
+
+
+
+-Configured the resolv.conf file to point to the domnain controller with nano. 
+
  ### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
  ![Screenshot 2024-11-23 215517](https://github.com/user-attachments/assets/1faa15e7-c699-47cd-94aa-888987457e36)
 
