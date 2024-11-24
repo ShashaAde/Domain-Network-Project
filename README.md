@@ -106,18 +106,32 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
 ### Ubuntu Server Setup
   ![Screenshot 2024-11-23 174653](https://github.com/user-attachments/assets/f904ec06-e32a-4dea-9708-4ae51806eeab)
+
+  Selected the Ubuntu Server ISO file for installation into the Virtual Machine set aside for my worksations.  
   
   ![Screenshot 2024-11-23 174741](https://github.com/user-attachments/assets/b64023a9-cec9-4e84-a98f-c288bb6392e9)
+
+  Set up a Linux user that would be used to install the operating system.
   
   ![Screenshot 2024-11-23 175433](https://github.com/user-attachments/assets/324fee11-7af6-4857-a1ba-e0f78bd85cfb)
+
+  Installed the virtual machine with customized settings to my liking.
   
   ![Screenshot 2024-11-23 180805](https://github.com/user-attachments/assets/280e6faa-146a-4d93-8443-7d0dd60bc79f)
+
+  Started the installation proccess of the Ubuntu Server operating system.
   
   ![Screenshot 2024-11-23 180952](https://github.com/user-attachments/assets/3c16a7a7-a94d-471d-978a-f7458c96f317)
+
+  Made a user account that would be used for logging into the server.
   
   ![Screenshot 2024-11-23 181033](https://github.com/user-attachments/assets/7f5efe43-17ac-49c4-a2d0-030d8675ffc8)
+
+  Installed OpenSSH server package into the server to allow SSH to remote machines
   
   ![Screenshot 2024-11-23 181121](https://github.com/user-attachments/assets/db5d4064-0a40-4c88-bc6b-3af1c19bede4)
+
+  Installed the operating system with the setting preferences that I chose.
 
 ### Ubuntu Setup
   ![Screenshot 2024-11-23 175054](https://github.com/user-attachments/assets/d9bd9c96-d768-40e8-8b29-909d4521990f)
