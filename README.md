@@ -223,7 +223,7 @@ sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-com
 
 hostnamectl set-hostname ubuntu.portfolio.local
 
--Changed the host name on my Ubuntu desktop.
+- Changed the host name on my Ubuntu desktop.
 
 systemctl disable systemd-resolved.service
 systemctl stop systemd-resolved.service
