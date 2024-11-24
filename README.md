@@ -242,7 +242,17 @@ realm discover portfolio.local
 
 -Checking if the Ubuntu desktop can discover the domain controller
 
--Joined the Ubuntu desktop to the domain with realm. 
+
+realm join -U Administrator portfolio.local
+
+- ran into a problem, where it said I didn't have the prober permissions to join.
+- after doing research I found that editing/creating a /etc/krb5.conf and adding the following worked:
+   [libdefaults]
+  default_realm = portfolio.local
+  rdns = false
+
+
+  -Joined the Ubuntu desktop to the domain with realm. 
 
  ### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
  ![Screenshot 2024-11-23 215517](https://github.com/user-attachments/assets/1faa15e7-c699-47cd-94aa-888987457e36)
