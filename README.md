@@ -30,9 +30,9 @@ The objective of this project is to integrate and expand the networks of three m
 ## Steps
 
 ## Virtual Machine Installation and Operating Systems Setup
--Downloaded VMware Workstation 17 Player to create and run multiple virtual computers om.
+-Downloaded VMware Workstation 17 Player to create and run multiple virtual machines om.
 
--Downloaded the needed ISO files to run on VMware, which included: Windows Server 2019, Windows 10, Ubuntu Live Server, and Ubuntu. 
+-Downloaded the needed ISO files to run on VMware, which included: Windows Server 2019, Windows, Ubuntu Live Server, and Ubuntu. 
 
 ### Windows Server 2019 Setup
   ![Screenshot 2024-11-23 182357](https://github.com/user-attachments/assets/14286d57-5b24-410f-9320-c23a6e9f58b8)
@@ -60,30 +60,49 @@ Allocated memory, and assigned processor cores to the virtual machine.
   
   ![Screenshot 2024-11-23 174444](https://github.com/user-attachments/assets/8bedcf7b-77f5-4ec8-acc6-66ff5923778e)
 
-  Chose the Standard Windows Server 2019 Operating System.
+  Chose the Standard Windows Server 2019 Operating System as the operating system to be installed on this particular machine.
   
   ![Screenshot 2024-11-23 174539](https://github.com/user-attachments/assets/49fc3eb7-abdf-4e0f-8c9e-6a4b842238c1)
 
-  Partitioned the hard drive to provide overall performance and scallability options. 
+  Partitioned the hard drive to provide overall performance and scallability options.
+  - The installation proccess completed and I was sent to the start up log-in interface.
 
 ### Windows 10 Pro (Workstation) Setup
   ![Screenshot 2024-11-23 180354](https://github.com/user-attachments/assets/1471993e-ef37-4b0c-a988-4471e3aba989)
+
+  Selected the Windows ISO file for installation into the Virtual Machine set aside for my worksations.  
   
   ![Screenshot 2024-11-23 180457](https://github.com/user-attachments/assets/7b4b4dfa-cc1e-4e85-9631-878f8fd4fd7a)
+
+  Allocated memory, and assigned processor cores to the virtual machine. 
   
   ![Screenshot 2024-11-23 180513](https://github.com/user-attachments/assets/b6778fa8-16fa-4b9b-87ed-65092ed1b33a)
-  
+
+  Installed the virtual machine with customized settings to my liking.
+
   ![Screenshot 2024-11-23 181254](https://github.com/user-attachments/assets/d35d2ef7-2d17-4674-90c7-d9b8c10823d5)
-  
+
+  Started up the Operating System installation process for Windows 10 Pro (workstations).
+
   ![Screenshot 2024-11-23 181438](https://github.com/user-attachments/assets/03084196-5a90-4bd1-b047-37d3d82ae8c4)
-  
+
+  Chose Windows 10 Pro as the operating system to be installed on this particular virtual machine.
+
   ![Screenshot 2024-11-23 181531](https://github.com/user-attachments/assets/d0d4afcd-c138-425d-9f60-71db056c0681)
+
+  Partitioned the hard drive to provide overall performance and scallability options. 
   
   ![Screenshot 2024-11-23 181554](https://github.com/user-attachments/assets/fb14bbf5-78d3-4cd3-9209-dfcf6e462b18)
+
+  The installation of the Windows 10 Pro operating system began.
   
   ![Screenshot 2024-11-23 182845](https://github.com/user-attachments/assets/27f4adfa-a8ef-4b38-85d5-bf80ea3463e5)
+
+  Once the operating system compelted installing, I began to personalize the virtual machine's microsoft account. 
   
   ![Screenshot 2024-11-23 183107](https://github.com/user-attachments/assets/fc7f3e1c-3eca-4ecb-aa20-686ec5d4ccff)
+
+  Set up a account that will be a administrator for this virtual machine. 
 
 ### Ubuntu Server Setup
   ![Screenshot 2024-11-23 174653](https://github.com/user-attachments/assets/f904ec06-e32a-4dea-9708-4ae51806eeab)
