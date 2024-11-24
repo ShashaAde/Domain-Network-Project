@@ -41,19 +41,30 @@ The objective of this project is to integrate and expand the networks of three m
   
   ![Screenshot 2024-11-23 172302](https://github.com/user-attachments/assets/84713e12-d589-4b8a-a10b-448862247b45)
 
-Selected the Windows Server 2019 operating system as a host on this particular virtual computer.
+Selected the Windows Server 2019 operating system as a host on this particular virtual machine.
     ![Screenshot 2024-11-23 172719](https://github.com/user-attachments/assets/8fb8627d-4b5f-48c2-83c7-6719c5f6984e)
 
+Allocated memory, and assigned processor cores to the virtual machine. 
     
   ![Screenshot 2024-11-23 172701](https://github.com/user-attachments/assets/404af2d2-2076-40aa-829d-41928e2fb2a7)
 
+  Installed the virtual machine with customized settings to my liking.
+
   ![Screenshot 2024-11-23 174231](https://github.com/user-attachments/assets/8b8d4a25-fb4f-4312-a338-a265639bc5d9)
+
+  To avoid the VMware disk error, after creating the virtual machine I then addded in the ISO file for Windows Server 2019.
   
   ![Screenshot 2024-11-23 174355](https://github.com/user-attachments/assets/93984941-1fe0-4cef-b919-b0d1ba7e0fff)
   
+  Started up the Operating System installation process for Windows Server 2019.
+  
   ![Screenshot 2024-11-23 174444](https://github.com/user-attachments/assets/8bedcf7b-77f5-4ec8-acc6-66ff5923778e)
+
+  Chose the Standard Windows Server 2019 Operating System.
   
   ![Screenshot 2024-11-23 174539](https://github.com/user-attachments/assets/49fc3eb7-abdf-4e0f-8c9e-6a4b842238c1)
+
+  Partitioned the hard drive to provide overall performance and scallability options. 
 
 ### Windows 10 Pro (Workstation) Setup
   ![Screenshot 2024-11-23 180354](https://github.com/user-attachments/assets/1471993e-ef37-4b0c-a988-4471e3aba989)
