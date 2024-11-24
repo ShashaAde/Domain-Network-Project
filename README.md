@@ -30,11 +30,18 @@ The objective of this project is to integrate and expand the networks of three m
 ## Steps
 
 ## Virtual Machine Installation and Operating Systems Setup
+-Downloaded VMware Workstation 17 Player to create and run multiple virtual computers om.
+
+-Downloaded the needed ISO files to run on VMware, which included: Windows Server 2019, Windows 10, Ubuntu Live Server, and Ubuntu. 
 
 ### Windows Server 2019 Setup
   ![Screenshot 2024-11-23 182357](https://github.com/user-attachments/assets/14286d57-5b24-410f-9320-c23a6e9f58b8)
   
+ Opted to install the Windows Server 2019 ISO file, until later on in the installation process to avoid a VMware disk error which happens when installing the ISO file right away.
+  
   ![Screenshot 2024-11-23 172302](https://github.com/user-attachments/assets/84713e12-d589-4b8a-a10b-448862247b45)
+
+Selected the Windows Server 2019 operating system as a host on this particvular virtual computer.
   
   ![Screenshot 2024-11-23 172701](https://github.com/user-attachments/assets/404af2d2-2076-40aa-829d-41928e2fb2a7)
   
