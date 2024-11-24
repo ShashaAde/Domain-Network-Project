@@ -238,6 +238,10 @@ systemctl stop systemd-resolved.service
 
 realm discover portfolio.local
 
+![Screenshot 2024-11-24 002936](https://github.com/user-attachments/assets/e4e687b3-251f-4e0d-8015-95b1450ee771)
+
+-Checking if the Ubuntu desktop can discover the domain controller
+
 -Joined the Ubuntu desktop to the domain with realm. 
 
  ### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
