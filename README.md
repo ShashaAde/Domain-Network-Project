@@ -196,7 +196,8 @@ Allocated memory, and assigned processor cores to the virtual machine.
   ![Screenshot 2024-11-23 211319](https://github.com/user-attachments/assets/f3cf5889-943a-413b-8917-949734ba5c68)
 
   Left the rest of the settings as default when proceding with the domain promoiton.
-    - Allowed the promotion operation to complete.
+    
+  - Allowed the promotion operation to complete.
 
   
 
