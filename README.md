@@ -245,12 +245,13 @@ realm discover portfolio.local
 
 realm join -U Administrator portfolio.local
 
-- ran into a problem, where it said I didn't have the prober permissions to join.
-- after doing research I found that editing/creating a /etc/krb5.conf and adding the following worked:
+- Ran into a problem, where it said I didn't have the prober permissions to join.
+- After doing research I found that editing/creating a /etc/krb5.conf and adding the following worked:
    [libdefaults]
   default_realm = portfolio.local
   rdns = false
-
+  
+![Screenshot 2024-11-24 010956](https://github.com/user-attachments/assets/a8ddad54-15c0-4086-bf97-fc74d58d8e9c)
 
   -Joined the Ubuntu desktop to the domain with realm. 
 
