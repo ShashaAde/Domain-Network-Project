@@ -230,6 +230,8 @@ systemctl stop systemd-resolved.service
 
 -Disableing the systemd resolve service, so our domain server can resolve the DNS. 
 
+ sudo nano /etc/resolv.conf
+
 ![Screenshot 2024-11-24 001829](https://github.com/user-attachments/assets/34e2b288-6a14-4f28-b7f4-88de32d1af3f)
 
 -Configured the resolv.conf file to point to the domnain controller with nano. 
