@@ -159,5 +159,10 @@ Allocated memory, and assigned processor cores to the virtual machine.
   Set up a user account for Ubuntu.
     - The installation proccess completed and I was sent to the start up log-in interface.
 
+## Configuring Windows Server 2019 to a domain 
+  ### Careating an Active Directory domain
+
+
+
 
 
