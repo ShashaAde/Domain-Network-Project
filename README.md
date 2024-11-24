@@ -219,40 +219,40 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir     packagekit
 
-  - Installed realmd packages that allow my Ubuntu desktop to connect to my domain controller.
+  Installed realmd packages that allow my Ubuntu desktop to connect to my domain controller.
 
   hostnamectl set-hostname ubuntu.portfolio.local
 
-  - Changed the host name on my Ubuntu desktop.
+  Changed the host name on my Ubuntu desktop.
 
   systemctl disable systemd-resolved.service
   systemctl stop systemd-resolved.service
 
-  - Disableing the systemd resolve service, so our domain server can resolve the DNS. 
+  Disableing the systemd resolve service, so our domain server can resolve the DNS. 
 
    sudo nano /etc/resolv.conf
 
   ![Screenshot 2024-11-24 001829](https://github.com/user-attachments/assets/34e2b288-6a14-4f28-b7f4-88de32d1af3f)
 
-  - Configured the resolv.conf file to point to the domnain controller with nano. 
+  Configured the resolv.conf file to point to the domnain controller with nano. 
 
   realm discover portfolio.local
 
   ![Screenshot 2024-11-24 002936](https://github.com/user-attachments/assets/e4e687b3-251f-4e0d-8015-95b1450ee771)
 
-  - Checking if the Ubuntu desktop can discover the domain controller.
+  Checking if the Ubuntu desktop can discover the domain controller.
 
   realm join -U Administrator portfolio.local
 
-  - Ran into a problem, where it said I didn't have the prober permissions to join.
-  - After doing research I found that editing/creating a /etc/krb5.conf and adding the following worked:
+  Ran into a problem, where it said I didn't have the prober permissions to join.
+    - After doing research I found that editing/creating a /etc/krb5.conf and adding the following worked:
      [libdefaults]
     default_realm = portfolio.local
     rdns = false
   
   ![Screenshot 2024-11-24 010956](https://github.com/user-attachments/assets/a8ddad54-15c0-4086-bf97-fc74d58d8e9c)
 
-  - Joined the Ubuntu desktop to the domain with realm. 
+ Joined the Ubuntu desktop to the domain with realm. 
 
 ### Joining my Ubuntu server to the Domain 
 
@@ -285,13 +285,13 @@ Allocated memory, and assigned processor cores to the virtual machine.
  
   ![Screenshot 2024-11-24 013616](https://github.com/user-attachments/assets/bd2edc72-64db-46d4-bcd4-310c2827fd51)
 
-  - Configured the resolv.conf file to point to the domnain controller with vim. 
+  Configured the resolv.conf file to point to the domnain controller with vim. 
 
   realm discover portfolio.local
 
   ![Screenshot 2024-11-24 013843](https://github.com/user-attachments/assets/b411c205-6f3b-4545-8735-1e1f8d3cf892)
 
-  - Checking if the Ubuntu desktop can discover the domain controller.
+  Checking if the Ubuntu desktop can discover the domain controller.
 
   realm join -U Administrator portfolio.local
 
@@ -303,25 +303,25 @@ Allocated memory, and assigned processor cores to the virtual machine.
   
   ![Screenshot 2024-11-24 015433](https://github.com/user-attachments/assets/4f09b362-c636-4eeb-b173-853e2df42caf)
 
-  - Joined the Ubuntu desktop to the domain with realm.
+  Joined the Ubuntu desktop to the domain with realm.
 
 ### Joining my Windows 10 Pro (workstation) to the Domain 
 
   ![Screenshot 2024-11-24 021453](https://github.com/user-attachments/assets/4a87f882-9092-40ec-9f25-dfef359bd8d2)
 
-  - Set the workstation's IP address to static (while on a administrator account), and made the DNS server's IP       address the same as my domain controllers IP.
+  Set the workstation's IP address to static (while on a administrator account), and made the DNS server's IP       address the same as my domain controllers IP.
   
   ![Screenshot 2024-11-24 021838](https://github.com/user-attachments/assets/e1fe1b1d-ae1c-48a4-90c9-7dd6f6f1cec9)
 
-  - Performed a nslookup to make sure the DNS server is resolved. 
+  Performed a nslookup to make sure the DNS server is resolved. 
 
   ![Screenshot 2024-11-24 022432](https://github.com/user-attachments/assets/3bdf33ee-b355-4051-ad2d-c97f1d2b6fc7)
 
-  - Changed the workstation's name and domain through System Properties in Windows Settings.
+  Changed the workstation's name and domain through System Properties in Windows Settings.
 
   ![Screenshot 2024-11-24 022959](https://github.com/user-attachments/assets/92ee8194-6104-463f-ab5b-ab6c7980daba)
 
-  - Joined the workstation to the domain. 
+  Joined the workstation to the domain. 
 
 ### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
  ![Screenshot 2024-11-23 215517](https://github.com/user-attachments/assets/1faa15e7-c699-47cd-94aa-888987457e36)
@@ -331,8 +331,8 @@ Allocated memory, and assigned processor cores to the virtual machine.
  ![Screenshot 2024-11-23 215951](https://github.com/user-attachments/assets/4d2b3342-33c9-40b6-ab22-319be5640f39)
 
  Created a new Zone.
- - Made sure the new Zone was a Primary zone.
- - Assigned a name (portfolio.com) to the zone.
+   - Made sure the new Zone was a Primary zone.
+   - Assigned a name (portfolio.com) to the zone.
    
 ![Screenshot 2024-11-23 220609](https://github.com/user-attachments/assets/dd45a557-9812-4366-9f25-cab111b796f8)
 
@@ -341,7 +341,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 ![Screenshot 2024-11-23 222039](https://github.com/user-attachments/assets/56d16158-b825-4b1b-9b09-5a6e2ce5a441)
 
 Added a new host (PW) to resolve a name to its IP.
-- I did the same for the Domain, Ubuntu desktop and Ubuntu server.
+  - I did the same for the Domain, Ubuntu desktop and Ubuntu server.
 
  ### Created reverse lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
 
@@ -350,8 +350,8 @@ Added a new host (PW) to resolve a name to its IP.
 ![Screenshot 2024-11-23 222719](https://github.com/user-attachments/assets/d9cf1e96-a94e-422b-8b4c-1e6dc622445a)
 
  Created a new Zone.
- - Made sure the new Zone was a Primary zone.
- - Chose IPv4Reverse Lookup Zone.
+   - Made sure the new Zone was a Primary zone.
+   - Chose IPv4Reverse Lookup Zone.
 
 ![Screenshot 2024-11-23 223425](https://github.com/user-attachments/assets/f96456cc-cd26-4027-8015-570f1daf5363)
 
@@ -364,7 +364,7 @@ This is the result of the new Zone (reverse).
 ![Screenshot 2024-11-23 224147](https://github.com/user-attachments/assets/a4436a9e-6dd0-44fa-8cb5-3dfb440bd25c)
 
 Added a new Pointer for PW to resolve a IP to its name.
-- I did the same for the Domain, Ubuntu desktop and Ubuntu server.
+  - I did the same for the Domain, Ubuntu desktop and Ubuntu server.
 
 ### Results and Testing 
 ![Screenshot 2024-11-23 224658](https://github.com/user-attachments/assets/1e5d1a06-737d-495e-b83d-d491577712b8)
@@ -380,13 +380,13 @@ This is the result of the forward lookup zone.
 This is the result of the reverse lookup zone.
 
 A problem I am running into right now is that my workstation can reach my domain, but my domain can't find the workstaion.
-- I then tried my Ubuntu desktop virtual machine and my domain was able to find it. 
-- I trouble shooted this problem by turning off the workstations firewall, and that let me know were to find a solution.
+  - I then tried my Ubuntu desktop virtual machine and my domain was able to find it. 
+  - I trouble shooted this problem by turning off the workstations firewall, and that let me know were to find a solution.
   
 ![Screenshot 2024-11-23 231808](https://github.com/user-attachments/assets/34ba4c14-35f5-4b6c-9915-e3b5ff3d9219)
 
 To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incomming ping requests from all IPs.
-- I was then able to ping the workstation.
+  - I was then able to ping the workstation.
 
 ## Used Remote Desktop Connection to RDP from the domain (Windows Server 2019) to the workstation (Windows 10 Pro)
   ### Turning on Remote desktop access for the workstation
@@ -394,13 +394,13 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   ![Screenshot 2024-11-24 154426](https://github.com/user-attachments/assets/5ff10613-4189-4d08-b6c0-2106cbe699b1)
 
   Searched for the desktop settings in the Windows search bar.
-  - Enabled Remote Desktop in the Windows System settings. 
+    - Enabled Remote Desktop in the Windows System settings. 
 
   ![Screenshot 2024-11-24 154023](https://github.com/user-attachments/assets/de24266a-c48d-47e8-9aec-1d53a30f3c47)
   
   Searched for the Remote Desktop Connection App in the Windows Search bar.
-  - Connected to the workstation by entering in its name on the network.
-  - If I had more than one account on the computer then it would of prompted me to enter in which account I would like to RDP into. 
+    - Connected to the workstation by entering in its name on the network.
+    - If I had more than one account on the computer then it would of prompted me to enter in which account I would like to RDP into. 
 
   ![Screenshot 2024-11-24 154650](https://github.com/user-attachments/assets/2563144f-2d8a-4fdd-8bac-5147705520b1)
 
@@ -412,7 +412,12 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   The domain controller was able to successfully RDP into the workstation. 
 
-    
+  ### Using SSH to gain remote access to Linux clients (Ubuntu desktop & Ubuntu Server) from a Windows client (Windows 10 Pro) , and vice versa for the Linux clients. 
+
+  ## Using Powershell on a Windows client to SSH into Linux clients.
+
+  Searched for the desktop settings in the Windows search bar.
+    - Enabled Remote Desktop in the Windows System settings. 
    
 
 
