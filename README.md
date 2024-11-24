@@ -230,7 +230,7 @@ systemctl stop systemd-resolved.service
 
 -Disableing the systemd resolve service, so our domain server can resolve the DNS. 
 
-![Screenshot 2024-11-24 001231](https://github.com/user-attachments/assets/3673c437-5b39-4199-9fbf-d96979a9e6df)
+![Screenshot 2024-11-24 001829](https://github.com/user-attachments/assets/34e2b288-6a14-4f28-b7f4-88de32d1af3f)
 
 -Configured the resolv.conf file to point to the domnain controller with nano. 
 
@@ -246,7 +246,6 @@ systemctl stop systemd-resolved.service
  - Assigned a name (portfolio.com) to the zone.
    
 ![Screenshot 2024-11-23 220609](https://github.com/user-attachments/assets/dd45a557-9812-4366-9f25-cab111b796f8)
-
 
  This the result of the new Zone (forward). 
 
