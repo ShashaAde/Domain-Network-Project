@@ -236,6 +236,10 @@ systemctl stop systemd-resolved.service
 
 -Configured the resolv.conf file to point to the domnain controller with nano. 
 
+realm discover portfolio.local
+
+-Joined the Ubuntu desktop to the domain with realm. 
+
  ### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
  ![Screenshot 2024-11-23 215517](https://github.com/user-attachments/assets/1faa15e7-c699-47cd-94aa-888987457e36)
 
