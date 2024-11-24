@@ -388,8 +388,31 @@ A problem I am running into right now is that my workstation can reach my domain
 To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incomming ping requests from all IPs.
 - I was then able to ping the workstation.
 
+## Used Remote Desktop Connection to RDP from the domain (Windows Server 2019) to the workstation (Windows 10 Pro)
+  ### Turning on Remote desktop access for the workstation
+  
+  ![Screenshot 2024-11-24 154426](https://github.com/user-attachments/assets/5ff10613-4189-4d08-b6c0-2106cbe699b1)
 
+  Searched for the desktop settings in the Windows search bar.
+  - Enabled Remote Desktop in the Windows System settings. 
 
+  ![Screenshot 2024-11-24 154023](https://github.com/user-attachments/assets/de24266a-c48d-47e8-9aec-1d53a30f3c47)
+  
+  Searched for the Remote Desktop Connection App in the Windows Search bar.
+  - Connected to the workstation by entering in its name on the network.
+  - If I had more than one account on the computer then it would of prompted me to enter in which account I would like to RDP into. 
+
+  ![Screenshot 2024-11-24 154650](https://github.com/user-attachments/assets/2563144f-2d8a-4fdd-8bac-5147705520b1)
+
+  Once the workstation was found, I was prompted to log into the user account on the workstation (Administrator).
+
+  ## Result
+  
+  ![Screenshot 2024-11-24 155224](https://github.com/user-attachments/assets/00d69c0b-cbd6-4b67-901b-70b271986d49)
+
+  The domain controller was able to successfully RDP into the workstation. 
+
+    
    
 
 
