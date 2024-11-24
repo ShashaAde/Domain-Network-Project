@@ -253,6 +253,15 @@ This is the result of the new Zone (reverse).
 Added a new Pointer for PW to resolve a IP to its name.
 - I did the same for the Ubuntu desktop & server.
 
+### Results and Testing 
+![Screenshot 2024-11-23 224658](https://github.com/user-attachments/assets/1e5d1a06-737d-495e-b83d-d491577712b8)
+
+This is the result of the foward lookup zone
+
+![Screenshot 2024-11-23 224716](https://github.com/user-attachments/assets/96995709-9dd1-465a-9cd0-022e8519a8b4)
+
+This is the result of the reverse lookup zone
+
 
    
 
