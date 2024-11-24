@@ -406,7 +406,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Once the workstation was found, I was prompted to log into the user account on the workstation (Administrator).
 
-  ## Result
+  ## Results
   
   ![Screenshot 2024-11-24 155224](https://github.com/user-attachments/assets/00d69c0b-cbd6-4b67-901b-70b271986d49)
 
