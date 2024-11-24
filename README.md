@@ -211,101 +211,115 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
 ### Joining my Ubuntu desktop to the Domain 
 
-![Screenshot 2024-11-23 234707](https://github.com/user-attachments/assets/efc38c49-f81e-42a8-95b0-d2d438cc068b)
+  ![Screenshot 2024-11-23 234707](https://github.com/user-attachments/assets/efc38c49-f81e-42a8-95b0-d2d438cc068b)
 
-Added my domain IP as the DNS Server address for my Ubuntu desktop.
+  Added my domain IP as the DNS Server address for my Ubuntu desktop.
 
-sudo service NetworkManager restart
+  sudo service NetworkManager restart
 
-sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
+  sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir     packagekit
 
-- Installed realmd packages that allow my Ubuntu desktop to connect to my domain controller.
+  - Installed realmd packages that allow my Ubuntu desktop to connect to my domain controller.
 
-hostnamectl set-hostname ubuntu.portfolio.local
+  hostnamectl set-hostname ubuntu.portfolio.local
 
-- Changed the host name on my Ubuntu desktop.
+  - Changed the host name on my Ubuntu desktop.
 
-systemctl disable systemd-resolved.service
-systemctl stop systemd-resolved.service
+  systemctl disable systemd-resolved.service
+  systemctl stop systemd-resolved.service
 
-- Disableing the systemd resolve service, so our domain server can resolve the DNS. 
+  - Disableing the systemd resolve service, so our domain server can resolve the DNS. 
 
- sudo nano /etc/resolv.conf
+   sudo nano /etc/resolv.conf
 
-![Screenshot 2024-11-24 001829](https://github.com/user-attachments/assets/34e2b288-6a14-4f28-b7f4-88de32d1af3f)
+  ![Screenshot 2024-11-24 001829](https://github.com/user-attachments/assets/34e2b288-6a14-4f28-b7f4-88de32d1af3f)
 
-- Configured the resolv.conf file to point to the domnain controller with nano. 
+  - Configured the resolv.conf file to point to the domnain controller with nano. 
 
-realm discover portfolio.local
+  realm discover portfolio.local
 
-![Screenshot 2024-11-24 002936](https://github.com/user-attachments/assets/e4e687b3-251f-4e0d-8015-95b1450ee771)
+  ![Screenshot 2024-11-24 002936](https://github.com/user-attachments/assets/e4e687b3-251f-4e0d-8015-95b1450ee771)
 
-- Checking if the Ubuntu desktop can discover the domain controller.
+  - Checking if the Ubuntu desktop can discover the domain controller.
 
-realm join -U Administrator portfolio.local
+  realm join -U Administrator portfolio.local
 
-- Ran into a problem, where it said I didn't have the prober permissions to join.
-- After doing research I found that editing/creating a /etc/krb5.conf and adding the following worked:
-   [libdefaults]
-  default_realm = portfolio.local
-  rdns = false
+  - Ran into a problem, where it said I didn't have the prober permissions to join.
+  - After doing research I found that editing/creating a /etc/krb5.conf and adding the following worked:
+     [libdefaults]
+    default_realm = portfolio.local
+    rdns = false
   
-![Screenshot 2024-11-24 010956](https://github.com/user-attachments/assets/a8ddad54-15c0-4086-bf97-fc74d58d8e9c)
+  ![Screenshot 2024-11-24 010956](https://github.com/user-attachments/assets/a8ddad54-15c0-4086-bf97-fc74d58d8e9c)
 
   - Joined the Ubuntu desktop to the domain with realm. 
 
 ### Joining my Ubuntu server to the Domain 
 
-sudp apt update -y
+  sudp apt update -y
 
--Making sure I have all the current packages updated.
+  - Making sure I have all the current packages updated.
 
-sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
+  sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir     packagekit
 
-- Installed realmd packages that allow my Ubuntu desktop to connect to my domain controller.
+  - Installed realmd packages that allow my Ubuntu desktop to connect to my domain controller.
 
-sudo hostnamectl set-hostname ubntu-s.portfolio.local
+  sudo hostnamectl set-hostname ubntu-s.portfolio.local
 
-- Changed the host name of the Ubuntu server.
+  - Changed the host name of the Ubuntu server.
 
-hostname
+  hostname
 
-- Checked to see if hostname changed.
+  - Checked to see if hostname changed.
 
-systemctl disable systemd-resolved.service
-systemctl stop systemd-resolved.service
+  systemctl disable systemd-resolved.service
+  systemctl stop systemd-resolved.service
 
-- Disableing the systemd resolve service, so our domain server can resolve the DNS. 
+  - Disableing the systemd resolve service, so our domain server can resolve the DNS. 
 
-systemctl status systemd-resolved.service
+  systemctl status systemd-resolved.service
 
-- Checked to make sure the service is no longer running. 
+  - Checked to make sure the service is no longer running. 
 
- sudo vim /etc/resolv.conf
+   sudo vim /etc/resolv.conf
  
-![Screenshot 2024-11-24 013616](https://github.com/user-attachments/assets/bd2edc72-64db-46d4-bcd4-310c2827fd51)
+  ![Screenshot 2024-11-24 013616](https://github.com/user-attachments/assets/bd2edc72-64db-46d4-bcd4-310c2827fd51)
 
-- Configured the resolv.conf file to point to the domnain controller with vim. 
+  - Configured the resolv.conf file to point to the domnain controller with vim. 
 
-realm discover portfolio.local
+  realm discover portfolio.local
 
-![Screenshot 2024-11-24 013843](https://github.com/user-attachments/assets/b411c205-6f3b-4545-8735-1e1f8d3cf892)
+  ![Screenshot 2024-11-24 013843](https://github.com/user-attachments/assets/b411c205-6f3b-4545-8735-1e1f8d3cf892)
 
-- Checking if the Ubuntu desktop can discover the domain controller.
+  - Checking if the Ubuntu desktop can discover the domain controller.
 
-realm join -U Administrator portfolio.local
+  realm join -U Administrator portfolio.local
 
-- Ran into the same problem that happened with the Ubuntu desktop, where it said I didn't have the prober permissions to join.
-- After repeating the troubleshooting process by editing/creating a /etc/krb5.conf and adding the request to join worked:
-   [libdefaults]
-  default_realm = portfolio.local
-  rdns = false
+   - Ran into the same problem that happened with the Ubuntu desktop, where it said I didn't have the prober           permissions to join.
+   - After repeating the troubleshooting process by editing/creating a /etc/krb5.conf and adding the request to join   worked:
+     [libdefaults]
+    default_realm = portfolio.local
+    rdns = false
   
-![Screenshot 2024-11-24 015433](https://github.com/user-attachments/assets/4f09b362-c636-4eeb-b173-853e2df42caf)
+  ![Screenshot 2024-11-24 015433](https://github.com/user-attachments/assets/4f09b362-c636-4eeb-b173-853e2df42caf)
 
-  - Joined the Ubuntu desktop to the domain with realm. 
+  - Joined the Ubuntu desktop to the domain with realm.
 
- ### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
+### Joining my Windows 10 Pro (workstation) to the Domain 
+
+  ![Screenshot 2024-11-24 021453](https://github.com/user-attachments/assets/4a87f882-9092-40ec-9f25-dfef359bd8d2)
+
+  - Set the workstation's IP address to static (while on a administrator account), and made the DNS server's IP       address the same as my domain controllers IP.
+  
+  ![Screenshot 2024-11-24 021838](https://github.com/user-attachments/assets/e1fe1b1d-ae1c-48a4-90c9-7dd6f6f1cec9)
+
+  - Performed a nslookup to make sure the DNS server is resolved. 
+
+  ![Screenshot 2024-11-24 022432](https://github.com/user-attachments/assets/3bdf33ee-b355-4051-ad2d-c97f1d2b6fc7)
+
+  - Changed the workstation's name and domain through System Properties in Windows Settings. 
+
+### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
  ![Screenshot 2024-11-23 215517](https://github.com/user-attachments/assets/1faa15e7-c699-47cd-94aa-888987457e36)
 
  Accessed the DNS Manager thorugh the tools section of the Server Manager.
