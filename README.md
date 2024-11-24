@@ -65,7 +65,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
   ![Screenshot 2024-11-23 174539](https://github.com/user-attachments/assets/49fc3eb7-abdf-4e0f-8c9e-6a4b842238c1)
 
   Partitioned the hard drive to provide overall performance and scallability options.
-  - The installation proccess completed and I was sent to the start up log-in interface.
+    - The installation proccess completed and I was sent to the start up log-in interface.
 
 ### Windows 10 Pro (Workstation) Setup
   ![Screenshot 2024-11-23 180354](https://github.com/user-attachments/assets/1471993e-ef37-4b0c-a988-4471e3aba989)
@@ -103,6 +103,8 @@ Allocated memory, and assigned processor cores to the virtual machine.
   ![Screenshot 2024-11-23 183107](https://github.com/user-attachments/assets/fc7f3e1c-3eca-4ecb-aa20-686ec5d4ccff)
 
   Set up a account that will be a administrator for this virtual machine. 
+  - The installation proccess completed and I was sent to the start up log-in interface.
+
 
 ### Ubuntu Server Setup
   ![Screenshot 2024-11-23 174653](https://github.com/user-attachments/assets/f904ec06-e32a-4dea-9708-4ae51806eeab)
@@ -132,6 +134,8 @@ Allocated memory, and assigned processor cores to the virtual machine.
   ![Screenshot 2024-11-23 181121](https://github.com/user-attachments/assets/db5d4064-0a40-4c88-bc6b-3af1c19bede4)
 
   Installed the operating system with the setting preferences that I chose.
+    - The installation proccess completed and I was sent to the start up log-in interface.
+
 
 ### Ubuntu Setup
   ![Screenshot 2024-11-23 200344](https://github.com/user-attachments/assets/9f319339-32f7-4cd1-abca-5cfe5fc0745c)
@@ -146,12 +150,14 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   Installed the virtual machine with customized settings to my liking.
   
-  ![Screenshot 2024-11-23 175218](https://github.com/user-attachments/assets/ff3c729c-830d-4809-a84c-4d8096f8ed8d)
-
-  
-  
   ![Screenshot 2024-11-23 175613](https://github.com/user-attachments/assets/3c3fc66f-d621-4055-845a-ad0dd6111ab6)
+
+  Chose the deafult installation of the Ubuntu operating system. 
   
   ![Screenshot 2024-11-23 180151](https://github.com/user-attachments/assets/1330af93-9df2-47b3-9291-d22f8fe02645)
+
+  Set up a user account for Ubuntu.
+    - The installation proccess completed and I was sent to the start up log-in interface.
+
 
 
