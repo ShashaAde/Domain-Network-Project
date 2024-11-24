@@ -42,7 +42,8 @@ The objective of this project is to integrate and expand the networks of three m
   ![Screenshot 2024-11-23 172302](https://github.com/user-attachments/assets/84713e12-d589-4b8a-a10b-448862247b45)
 
 Selected the Windows Server 2019 operating system as a host on this particular virtual machine.
-    ![Screenshot 2024-11-23 172719](https://github.com/user-attachments/assets/8fb8627d-4b5f-48c2-83c7-6719c5f6984e)
+
+  ![Screenshot 2024-11-23 172719](https://github.com/user-attachments/assets/8fb8627d-4b5f-48c2-83c7-6719c5f6984e)
 
 Allocated memory, and assigned processor cores to the virtual machine. 
     
