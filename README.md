@@ -41,12 +41,12 @@ The objective of this project is to integrate and expand the networks of three m
   
   ![Screenshot 2024-11-23 172302](https://github.com/user-attachments/assets/84713e12-d589-4b8a-a10b-448862247b45)
 
-Selected the Windows Server 2019 operating system as a host on this particvular virtual computer.
-  
+Selected the Windows Server 2019 operating system as a host on this particular virtual computer.
+    ![Screenshot 2024-11-23 172719](https://github.com/user-attachments/assets/8fb8627d-4b5f-48c2-83c7-6719c5f6984e)
+
+    
   ![Screenshot 2024-11-23 172701](https://github.com/user-attachments/assets/404af2d2-2076-40aa-829d-41928e2fb2a7)
-  
-  ![Screenshot 2024-11-23 172719](https://github.com/user-attachments/assets/8fb8627d-4b5f-48c2-83c7-6719c5f6984e)
-  
+
   ![Screenshot 2024-11-23 174231](https://github.com/user-attachments/assets/8b8d4a25-fb4f-4312-a338-a265639bc5d9)
   
   ![Screenshot 2024-11-23 174355](https://github.com/user-attachments/assets/93984941-1fe0-4cef-b919-b0d1ba7e0fff)
