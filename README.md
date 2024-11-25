@@ -702,7 +702,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
    
    ![Screenshot 2024-11-24 235503](https://github.com/user-attachments/assets/d267231b-8ada-42e2-9a83-242376ee87cb)
 
-   Went to my browser to configure WordPress by searching "http://localhost/"
+   Went to my browser to configure WordPress by searching "http://localhost/".
    
    ![Screenshot 2024-11-24 235707](https://github.com/user-attachments/assets/f49ab4d0-c7ff-4da4-b8c6-bd047a262f47)
 
