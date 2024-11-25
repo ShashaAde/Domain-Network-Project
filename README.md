@@ -366,7 +366,7 @@ This is the result of the new Zone (reverse).
 Added a new Pointer for PW to resolve a IP to its name.
   - I did the same for the Domain, Ubuntu desktop and Ubuntu server.
 
-### Results and Testing 
+## Results and Testing 
 ![Screenshot 2024-11-23 224658](https://github.com/user-attachments/assets/1e5d1a06-737d-495e-b83d-d491577712b8)
 
 ![Screenshot 2024-11-23 232820](https://github.com/user-attachments/assets/bc875524-1700-484b-8054-58574edd2c6e)
@@ -388,8 +388,8 @@ A problem I am running into right now is that my workstation can reach my domain
 To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incomming ping requests from all IPs.
   - I was then able to ping the workstation.
 
-## Used Remote Desktop Connection to RDP from the domain (Windows Server 2019) to the workstation (Windows 10 Pro)
-  ### Turning on Remote desktop access for the workstation
+### Used Remote Desktop Connection to RDP from the domain (Windows Server 2019) to the workstation (Windows 10 Pro)
+  ## Turning on Remote desktop access for the workstation
   
   ![Screenshot 2024-11-24 154426](https://github.com/user-attachments/assets/5ff10613-4189-4d08-b6c0-2106cbe699b1)
 
@@ -412,12 +412,82 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   The domain controller was able to successfully RDP into the workstation. 
 
-  ### Using SSH to gain remote access to Linux clients (Ubuntu desktop & Ubuntu Server) from a Windows client (Windows 10 Pro) , and vice versa for the Linux clients. 
+  ### Using SSH to gain remote access to Linux clients (Ubuntu desktop & Ubuntu Server) from a Windows client (Windows 10 Pro), from one Linux client to another. 
 
   ## Using Powershell on a Windows client to SSH into Linux clients.
 
-  Searched for the desktop settings in the Windows search bar.
-    - Enabled Remote Desktop in the Windows System settings. 
+  Searched for Windows PowerShell in the Windows search bar.
+    - Ran Windows PowerShell as administrator. 
+
+  Get-WindowsCapability -Online | ? Name -like 'OpenSSH.Client*'
+  
+  ![Screenshot 2024-11-24 161146](https://github.com/user-attachments/assets/16503570-7f19-4fd2-bd55-fd9952617a19)
+
+  Checked to see if ssh was installed.
+
+  ssh shashaade@ubntu-s.protfolio.local 
+  
+  ![Screenshot 2024-11-24 162416](https://github.com/user-attachments/assets/46d4365f-6e21-40d6-9cca-1b768a95cece)
+
+  After entering my Ubuntu server's login credentials, I was able to sucessfully SSH into it.
+
+### Set up multiple accounts for the Window Pro 10 (workstation) through the Window Domain.
+  
+  ![Screenshot 2024-11-24 180441](https://github.com/user-attachments/assets/03a7b669-5963-40e3-bb7d-beb4f683116a)
+
+  Created and organized unit with sub-organized units of containing different departments of a company within the Ative Directory Users and Comptuers tool settings.
+
+  ![Screenshot 2024-11-24 181150](https://github.com/user-attachments/assets/78de467f-96ea-48d3-9e00-c744c3153b52)
+
+  Created users in each of the sub-organized units.
+  
+  ![Screenshot 2024-11-24 181312](https://github.com/user-attachments/assets/6aff5f79-100e-466c-8e3d-f62111a94690)
+
+  Made security gorups for each department.
+  
+  ![Screenshot 2024-11-24 181537](https://github.com/user-attachments/assets/e91bd76e-a588-4dcd-8407-02019c3a4138)
+
+  Added each user to their respective groups. 
+  
+  ![Screenshot 2024-11-24 182209](https://github.com/user-attachments/assets/4e392cb5-ede6-48d5-b833-a882dbb5c474)
+
+  Accessed the accounts (on the workstation) that were made by the domain controller.
+
+### Used active directory and group policies to manage Domain accounts.
+
+  ## Created a group policy through account policies in the security settings to limit the character length of a password to 12 minimum for users on the Windows Pro system
+  
+  ![Screenshot 2024-11-24 184621](https://github.com/user-attachments/assets/d3eded6b-0649-4f70-b52f-f9d1fae514a7)
+
+  Created a new policy for my domain controller from the Group Policy Managment in the Tools tab.
+  - This policy is will be applied to those in Portfolio.INC.
+    
+  ![Screenshot 2024-11-24 183726](https://github.com/user-attachments/assets/5f339739-7042-4dfd-97ac-abf621d0a2c2)
+
+  Editied the Company Policy in Portfolio.INC to change the Password Policy (under the Computer Configuration's tab) to allow the minimum characters of a password to be 12. 
+  
+  ![Screenshot 2024-11-24 184844](https://github.com/user-attachments/assets/e6286fe6-8f3e-464b-bd97-924b89b24951)
+
+  When trying to change the password with anything lower than 12 chracters, this is the message that was shown. 
+
+  ## Created a group policy through software restriction policies in the security settings to restrict all users in the domain form opening Microsoft Store.
+  
+  ![Screenshot 2024-11-24 191814](https://github.com/user-attachments/assets/4305688d-4342-4353-bb87-c721cce31621)
+
+  Created a new policy for my domain controller from the Group Policy Managment in the Tools tab.
+  - This policy is will be applied to all users in the domain.
+  
+  ![Screenshot 2024-11-24 191711](https://github.com/user-attachments/assets/72911bdb-1d12-435a-a8de-e9c9881862a7)
+
+  Enabled a policy to disable Microsoft Store under the Group Policy Manager Editor with the path of: Computer configuration > policies > administrative templates > windows     componets > Store.
+  
+  
+
+  
+
+  
+
+  
    
 
 
