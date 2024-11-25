@@ -576,6 +576,139 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Here I am able to access the CEO folder, where I can do everything, but delete and take over files. 
 
+  ### Created a webpage by setting up WordPress with Linux (Ubuntu desktop).
+  ## Installed Dependencies 
+  
+  sudo apt update
+  
+  Made sure my ubuntu was updated before installing packages in the CLI
+
+  sudo apt install apache2 \
+                 ghostscript \
+                 libapache2-mod-php \
+                 mysql-server \
+                 php \
+                 php-bcmath \
+                 php-curl \
+                 php-imagick \
+                 php-intl \
+                 php-json \
+                 php-mbstring \
+                 php-mysql \
+                 php-xml \
+                 php-zip
+                 
+   Installed multiple packages 
+   
+   ## Installed WordPress
+    
+   sudo mkdir -p /srv/www
+   sudo chown www-data: /srv/www
+   sudo apt install curl
+   curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
+
+   Made a new directory for wordpress, and then changed the owner to Apache. 
+   
+   sudo nano /etc/apache2/sites-available/wordpress.conf
+   
+   Created a file to host the Apache site for WordPress. 
+  
+  ## Configured Apache for WordPress
+  
+  <VirtualHost *:80>
+      DocumentRoot /srv/www/wordpress
+      <Directory /srv/www/wordpress>
+          Options FollowSymLinks
+          AllowOverride Limit Options FileInfo
+          DirectoryIndex index.php
+          Require all granted
+      </Directory>
+      <Directory /srv/www/wordpress/wp-content>
+          Options FollowSymLinks
+          Require all granted
+      </Directory>
+  </VirtualHost>
+    
+   Added configurations within the file above.
+   
+   sudo a2ensite wordpress
+   systemctl reload apache2
+
+   Enabled the Wordpress site.
+   
+   sudo a2enmod rewrite
+   systemctl restart apache2
+
+   Enabled a Apache module.
+
+   sudo a2dissite 000-default
+   systemctl reload apache2
+
+   Disabled the default webstie.
+
+   sudo service apache2 reload
+
+   Reloaded apache.
+
+   ## Configured database
+   
+   $ sudo mysql -u root
+  
+   ![Screenshot 2024-11-24 232806](https://github.com/user-attachments/assets/7c1a15c2-15ee-4298-8365-34617435f596)
+
+   Opened MySQL database.
+   
+   CREATE DATABASE wordpress;
+   
+   Created a new database named "wordpress".
+   
+   CREATE USER wordpress@localhost IDENTIFIED BY '<your-password(testing)>';  
+  
+   Created a new user named "wordpress", and configured its password.
+    
+   GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER ON wordpress.* TO wordpress@localhost;
+
+   Gave permissions on the WordPress database.
+   
+   FLUSH PRIVILEGES;
+  
+   Updated MySQL permissions.
+
+   quit 
+   
+   Exited out of the database.
+
+   ## Configured WordPress
+
+   cd /srv/www/wordpress/
+   ![Screenshot 2024-11-24 233923](https://github.com/user-attachments/assets/302e3a2a-b86d-49a4-b8e1-6c0971f79bad)
+ 
+   Moved into the wordpress directory.
+   - ls displays a list of files in the current directory.
+     
+   sudo -u www-data cp wp-config-sample.php wp-config.php
+  
+   Copied a the sample file into "wp-config.php".
+
+   sudo -u www-data nano wp-config.php
+  
+   ![Screenshot 2024-11-24 234909](https://github.com/user-attachments/assets/442c4053-4442-42c7-af34-89101ae0d7d6)
+
+   Editied the "wp-config.php" file 
+   - Intered my database name (wordpress), database user (wordpress) and password (testing) into the file.
+
+   ## Configure WordPress
+   
+   ![Screenshot 2024-11-24 235503](https://github.com/user-attachments/assets/d267231b-8ada-42e2-9a83-242376ee87cb)
+
+   Went to my browser to configure WordPress by searching "http://localhost/
+   
+   ![Screenshot 2024-11-24 235707](https://github.com/user-attachments/assets/f49ab4d0-c7ff-4da4-b8c6-bd047a262f47)
+
+   Successfully installed WordPress through apache for my Linux client.
+   
+   
+
 
 
   
