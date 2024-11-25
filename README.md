@@ -209,7 +209,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
     ```
     sudo apt install net-tools
 
-### Joining my Ubuntu desktop to the Domain 
+### Joined my Ubuntu desktop to the Domain 
 
   ![Screenshot 2024-11-23 234707](https://github.com/user-attachments/assets/efc38c49-f81e-42a8-95b0-d2d438cc068b)
 
@@ -254,7 +254,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
  Joined the Ubuntu desktop to the domain with realm. 
 
-### Joining my Ubuntu server to the Domain 
+### Joined my Ubuntu server to the Domain 
 
   sudp apt update -y
 
@@ -305,7 +305,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   Joined the Ubuntu desktop to the domain with realm.
 
-### Joining my Windows 10 Pro (workstation) to the Domain 
+### Joined my Windows 10 Pro (workstation) to the Domain 
 
   ![Screenshot 2024-11-24 021453](https://github.com/user-attachments/assets/4a87f882-9092-40ec-9f25-dfef359bd8d2)
 
@@ -366,7 +366,7 @@ This is the result of the new Zone (reverse).
 Added a new Pointer for PW to resolve a IP to its name.
   - I did the same for the Domain, Ubuntu desktop and Ubuntu server.
 
-## Results and Testing 
+### Results and Testing 
 ![Screenshot 2024-11-23 224658](https://github.com/user-attachments/assets/1e5d1a06-737d-495e-b83d-d491577712b8)
 
 ![Screenshot 2024-11-23 232820](https://github.com/user-attachments/assets/bc875524-1700-484b-8054-58574edd2c6e)
@@ -388,8 +388,8 @@ A problem I am running into right now is that my workstation can reach my domain
 To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incomming ping requests from all IPs.
   - I was then able to ping the workstation.
 
-### Used Remote Desktop Connection to RDP from the domain (Windows Server 2019) to the workstation (Windows 10 Pro)
-  ## Turning on Remote desktop access for the workstation
+## Used Remote Desktop Connection to RDP from the domain (Windows Server 2019) to the workstation (Windows 10 Pro)
+  ### Turning on Remote desktop access for the workstation
   
   ![Screenshot 2024-11-24 154426](https://github.com/user-attachments/assets/5ff10613-4189-4d08-b6c0-2106cbe699b1)
 
@@ -406,15 +406,15 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Once the workstation was found, I was prompted to log into the user account on the workstation (Administrator).
 
-  ## Results
+  ### Results
   
   ![Screenshot 2024-11-24 155224](https://github.com/user-attachments/assets/00d69c0b-cbd6-4b67-901b-70b271986d49)
 
   The domain controller was able to successfully RDP into the workstation. 
 
-  ### Using SSH to gain remote access to Linux clients (Ubuntu desktop & Ubuntu Server) from a Windows client (Windows 10 Pro), from one Linux client to another. 
+  ## Used SSH to gain remote access to Linux clients (Ubuntu desktop & Ubuntu Server) from a Windows client (Windows 10 Pro), from one Linux client to another. 
 
-  ## Using Powershell on a Windows client to SSH into Linux clients.
+  ### Used Powershell on a Windows client to SSH into Linux clients.
 
   Searched for Windows PowerShell in the Windows search bar.
     - Ran Windows PowerShell as administrator. 
@@ -435,7 +435,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   This is the same process for using SSH to get into the Ubuntu desktop.
 
-  ## Using SSH to gain remote access between two Linux clients.
+  ### Used SSH to gain remote access between two Linux clients.
 
   ssh shashaade@ubntu-s.portfolio.local 
   
@@ -448,8 +448,8 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   This is the same process for using SSH to get into the Ubuntu desktop.
 
   
-### Created Users from CMD/CLI and gave them, sudo/admin rights for Ubuntu and Windows.
-  ## Windows 
+## Created Users from CMD/CLI and gave them, sudo/admin rights for Ubuntu and Windows.
+  ### Windows 
 
   net user username (testAdmin) password (justforfun12) /add 
   
@@ -474,7 +474,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Confirmed the user account was created on the client.
 
-### Set up multiple accounts for the Window Pro 10 (workstation) through the Window Domain.
+## Set up multiple accounts for the Window Pro 10 (workstation) through the Window Domain.
   
   ![Screenshot 2024-11-24 180441](https://github.com/user-attachments/assets/03a7b669-5963-40e3-bb7d-beb4f683116a)
 
@@ -496,9 +496,9 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Accessed the accounts (on the workstation) that were made by the domain controller.
 
-### Used active directory and group policies to manage Domain accounts.
+## Used active directory and group policies to manage Domain accounts.
 
-  ## Created a group policy through account policies in the security settings to limit the character length of a password to 12 minimum for users on the Windows Pro system
+  ### Created a group policy through account policies in the security settings to limit the character length of a password to 12 minimum for users on the Windows Pro system
   
   ![Screenshot 2024-11-24 184621](https://github.com/user-attachments/assets/d3eded6b-0649-4f70-b52f-f9d1fae514a7)
 
@@ -513,7 +513,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   When trying to change the password with anything lower than 12 chracters, this is the message that was shown. 
 
-  ## Created a group policy through software restriction policies in the security settings to restrict all users in the domain form opening Internet Explorer.
+  ### Created a group policy through software restriction policies in the security settings to restrict all users in the domain form opening Internet Explorer.
   
   ![Screenshot 2024-11-24 190142](https://github.com/user-attachments/assets/47b45f40-6537-467b-a821-318c7efcb3e4)
 
@@ -562,7 +562,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   Created a Drive Map and using the path location of the "Shares" file
   - Linked the GPO to the domain.
 
-  ## Results 
+  ### Results 
   ![Screenshot 2024-11-24 211003](https://github.com/user-attachments/assets/1d6e8328-7ffa-4148-bc48-620661dfcab8)
 
   On my workstation I can see the shared network file.
@@ -576,9 +576,9 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Here I am able to access the CEO folder, where I can do everything, but delete and take over files. 
 
-  ### Created a webpage by setting up WordPress with Linux (Ubuntu desktop).
+## Created a webpage by setting up WordPress with Linux (Ubuntu desktop).
   Used Ubuntu's guide on how to Install and configure WordPress https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
-  ## Installed Dependencies 
+  ### Installed Dependencies 
   
   sudo apt update
   
@@ -601,7 +601,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
                  
    Installed multiple packages 
    
-   ## Installed WordPress
+   ### Installed WordPress
     
    sudo mkdir -p /srv/www
    sudo chown www-data: /srv/www
@@ -614,7 +614,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
    
    Created a file to host the Apache site for WordPress. 
   
-  ## Configured Apache for WordPress
+  ### Configured Apache for WordPress
   
   <VirtualHost *:80>
       DocumentRoot /srv/www/wordpress
@@ -651,7 +651,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
    Reloaded apache.
 
-   ## Configured database
+   ### Configured database
    
    $ sudo mysql -u root
   
@@ -679,7 +679,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
    
    Exited out of the database.
 
-   ## Configured WordPress
+   ### Configured WordPress
 
    cd /srv/www/wordpress/
    ![Screenshot 2024-11-24 233923](https://github.com/user-attachments/assets/302e3a2a-b86d-49a4-b8e1-6c0971f79bad)
@@ -698,7 +698,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
    Editied the "wp-config.php" file 
    - Intered my database name (wordpress), database user (wordpress) and password (testing) into the file.
 
-   ## Configure WordPress
+   ### Configure WordPress
    
    ![Screenshot 2024-11-24 235503](https://github.com/user-attachments/assets/d267231b-8ada-42e2-9a83-242376ee87cb)
 
@@ -707,6 +707,10 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
    ![Screenshot 2024-11-24 235707](https://github.com/user-attachments/assets/f49ab4d0-c7ff-4da4-b8c6-bd047a262f47)
 
    Successfully installed WordPress through apache for my Linux client.
+
+##
+
+   
    
    
 
