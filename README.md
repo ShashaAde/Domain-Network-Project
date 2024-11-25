@@ -771,6 +771,51 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
    
    ![Screenshot 2024-11-25 014435](https://github.com/user-attachments/assets/8ea8f7c8-9edd-4d0e-b496-e3c50634b447)
 
+  ## Made a bash script that asks for a keyword to search for, then queries the logs for the key word.
+  
+  cd/var/log 
+
+  Moved to the log directory.
+  
+  touch query_logs.sh
+
+  Created the script file. 
+
+  nano query_logs.sh 
+
+  Edited the script file.
+
+  #!/bin/bash
+  
+   read -p "Enter a keyword to search for in logs: " keyword
+   
+   grep -ri "$keyword" /var/log 2>/dev/null || echo "No results found for '$keyword'."
+
+   Created a script to search the logs for a keyword that I typed in and then displays where the keyword was found. 
+
+   chmod +x search_logs.sh
+
+   Gave the script execute rights.
+
+   ./query_logs.sh
+
+   Ran the bash script. 
+
+   ### Results
+  
+   ![Screenshot 2024-11-25 024048](https://github.com/user-attachments/assets/0e7a56e2-3b66-4e4e-bc04-420b37b734b0)
+  
+   ![Screenshot 2024-11-25 024403](https://github.com/user-attachments/assets/6b3141c2-468f-488c-9b88-154b63fef0ff)
+
+   The bash script prompts the user to enter in a word they would like to see associated with any logs that are being captured in the domain controller. 
+   
+   - It then finds logs with the keyword and displays them. 
+   - If no logs are found, it displays "No results found for (the keyword).
+
+
+  
+  
+
 
    
 
