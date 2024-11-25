@@ -470,16 +470,25 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   When trying to change the password with anything lower than 12 chracters, this is the message that was shown. 
 
-  ## Created a group policy through software restriction policies in the security settings to restrict all users in the domain form opening Microsoft Store.
+  ## Created a group policy through software restriction policies in the security settings to restrict all users in the domain form opening Internet Explorer.
   
-  ![Screenshot 2024-11-24 191814](https://github.com/user-attachments/assets/4305688d-4342-4353-bb87-c721cce31621)
+  ![Screenshot 2024-11-24 190142](https://github.com/user-attachments/assets/47b45f40-6537-467b-a821-318c7efcb3e4)
 
   Created a new policy for my domain controller from the Group Policy Managment in the Tools tab.
   - This policy is will be applied to all users in the domain.
   
-  ![Screenshot 2024-11-24 191711](https://github.com/user-attachments/assets/72911bdb-1d12-435a-a8de-e9c9881862a7)
+  ![Screenshot 2024-11-24 190614](https://github.com/user-attachments/assets/22f2a892-2aaf-4bc4-83e3-e797b7f64983)
 
-  Enabled a policy to disable Microsoft Store under the Group Policy Manager Editor with the path of: Computer configuration > policies > administrative templates > windows     componets > Store.
+  Enabled a policy to disable Microsoft Store under the Group Policy Manager Editor with the path of: Computer configuration > policies > administrative templates > windows       componets > Internet Explorer.
+  
+  ![Screenshot 2024-11-24 193814](https://github.com/user-attachments/assets/7f24f933-bb2d-4072-a12c-906522e82cc5)
+
+  Now you can not opened Internet Explorer/ Microsoft Edge
+
+
+  ### Used group policies for network file share to make a secure drive-map for the domain controller and departments within the organization to share files.
+
+  Removed all groups form the file that I wanted to share 
   
   
 
