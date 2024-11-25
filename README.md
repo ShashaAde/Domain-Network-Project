@@ -577,6 +577,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   Here I am able to access the CEO folder, where I can do everything, but delete and take over files. 
 
   ### Created a webpage by setting up WordPress with Linux (Ubuntu desktop).
+  Used Ubuntu's guide on how to Install and configure WordPress https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
   ## Installed Dependencies 
   
   sudo apt update
@@ -701,7 +702,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
    
    ![Screenshot 2024-11-24 235503](https://github.com/user-attachments/assets/d267231b-8ada-42e2-9a83-242376ee87cb)
 
-   Went to my browser to configure WordPress by searching "http://localhost/
+   Went to my browser to configure WordPress by searching "http://localhost/"
    
    ![Screenshot 2024-11-24 235707](https://github.com/user-attachments/assets/f49ab4d0-c7ff-4da4-b8c6-bd047a262f47)
 
