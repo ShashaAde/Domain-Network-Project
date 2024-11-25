@@ -217,7 +217,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   sudo service NetworkManager restart
 
-  sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir     packagekit
+  sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
 
   Installed realmd packages that allow my Ubuntu desktop to connect to my domain controller.
 
@@ -295,8 +295,8 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   realm join -U Administrator portfolio.local
 
-   - Ran into the same problem that happened with the Ubuntu desktop, where it said I didn't have the prober           permissions to join.
-   - After repeating the troubleshooting process by editing/creating a /etc/krb5.conf and adding the request to join   worked:
+   - Ran into the same problem that happened with the Ubuntu desktop, where it said I didn't have the proper permissions to join.
+   - After repeating the troubleshooting process by editing/creating a /etc/krb5.conf and adding the request to join worked:
      [libdefaults]
     default_realm = portfolio.local
     rdns = false
@@ -309,7 +309,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   ![Screenshot 2024-11-24 021453](https://github.com/user-attachments/assets/4a87f882-9092-40ec-9f25-dfef359bd8d2)
 
-  Set the workstation's IP address to static (while on a administrator account), and made the DNS server's IP       address the same as my domain controllers IP.
+  Set the workstation's IP address to static (while on a administrator account), and made the DNS server's IP address the same as my domain controllers IP.
   
   ![Screenshot 2024-11-24 021838](https://github.com/user-attachments/assets/e1fe1b1d-ae1c-48a4-90c9-7dd6f6f1cec9)
 
@@ -425,11 +425,54 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Checked to see if ssh was installed.
 
-  ssh shashaade@ubntu-s.protfolio.local 
+  ssh shashaade@ubntu-s.portfolio.local 
   
   ![Screenshot 2024-11-24 162416](https://github.com/user-attachments/assets/46d4365f-6e21-40d6-9cca-1b768a95cece)
 
   After entering my Ubuntu server's login credentials, I was able to sucessfully SSH into it.
+   
+  ![Screenshot 2024-11-24 225216](https://github.com/user-attachments/assets/96ada3a8-a0d8-43c0-a17a-5cab9a6916f2)
+
+  This is the same process for using SSH to get into the Ubuntu desktop.
+
+  ## Using SSH to gain remote access between two Linux clients.
+
+  ssh shashaade@ubntu-s.portfolio.local 
+  
+  ![Screenshot 2024-11-24 223950](https://github.com/user-attachments/assets/277ec7d5-e339-48d3-8c11-f6b8b9f6e3af)
+
+  After entering my Ubuntu server's login credentials, I was able to sucessfully SSH into it.
+  
+  ![Screenshot 2024-11-24 224756](https://github.com/user-attachments/assets/4e908bcb-6cfd-4ed0-b65a-51b9596b9d04)
+
+  This is the same process for using SSH to get into the Ubuntu desktop.
+
+  
+### Created Users from CMD/CLI and gave them, sudo/admin rights for Ubuntu and Windows.
+  ## Windows 
+
+  net user username (testAdmin) password (justforfun12) /add 
+  
+  Added a new user on the client.
+
+  net localgroup administrators user (testAdmin) /add
+
+  Added the user to the local client's andministration group.
+
+  ## Ubuntu 
+
+  sudo adduser username (sha) 
+
+  Added a new user on the client.
+
+  sudo usermod -aG sudo username (sha)
+
+  Added the user to the local client's andministration group.
+  
+  net user
+  ![Screenshot 2024-11-24 212306](https://github.com/user-attachments/assets/50966798-e4dc-44ef-ab91-252ed1870ac2)
+
+  Confirmed the user account was created on the client.
 
 ### Set up multiple accounts for the Window Pro 10 (workstation) through the Window Domain.
   
