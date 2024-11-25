@@ -708,8 +708,76 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
    Successfully installed WordPress through apache for my Linux client.
 
-##
+## Created an Ubuntu server for system logging of the domain server with syslog.
+   ### Configured rsyslog
 
+   nano /etc/rsyslog.conf
+   
+   Edited the rsyslog file. 
+
+   ![Screenshot 2024-11-25 002320](https://github.com/user-attachments/assets/b325f76f-831a-4e22-92d3-a63e0b6dfc62)
+
+   Added configurations to the rsyslof file.
+    - These configuration tells the server that we are running syslog with its port UDP 514.
+   
+   ![Screenshot 2024-11-25 002657](https://github.com/user-attachments/assets/532b2496-f6bc-4fe9-91ec-0533e3f334b0)
+
+   Added configurations that will send the logs to a designated area to be displayed by Hostname/Program
+
+   rsyslogd -f /etc/rsyslog.conf -N1
+   ![Screenshot 2024-11-25 003402](https://github.com/user-attachments/assets/478aa63f-8274-4d3e-b486-9f42aa3a7de7)
+
+   Checked for any configuration errors. 
+
+   ### Configured client 
+
+   sudo nano /etc/rsyslog.conf
+
+   Edited the rsyslog file on my Ubuntu desktop to connect to my domain contoller. 
+  
+   ![Screenshot 2024-11-25 013531](https://github.com/user-attachments/assets/0c850f92-81dd-4ac7-b1a0-d0f495c12fa6)
+
+   
+   Told the rsyslog server where it can find the client at, and added other configurations at the bottom. 
+   - These configurations where from a youtube video found here: https://www.youtube.com/watch?v=mBJ8JfJnlXQ&t=199s
+
+   rsyslogd -f /etc/rsyslog.conf -N1
+  
+   ![Screenshot 2024-11-25 010147](https://github.com/user-attachments/assets/11fdac9a-f44a-40e5-bc3d-578190756660)
+
+   Checked for any configuration errors.
+
+   netstat -anup
+   ![Screenshot 2024-11-25 014037](https://github.com/user-attachments/assets/f98be6ee-ee83-43b3-8550-9a5dbc63a0a7)
+
+   Checked to see if rsyslog's port (514 UDP) was up.
+
+   cd /var/log
+
+   Moved to the log directory.
+
+   ls
+   
+   ![Screenshot 2024-11-25 014226](https://github.com/user-attachments/assets/3bed20a2-2287-4a56-bbad-ebcbde79d1d3)
+
+   Listed all the files in the log directory.
+
+   cd/ubuntu-s 
+   ls
+
+   Moved into my log files I configured and listed all the files that my client is logging.
+
+   ### Result 
+   
+   ![Screenshot 2024-11-25 014435](https://github.com/user-attachments/assets/8ea8f7c8-9edd-4d0e-b496-e3c50634b447)
+
+
+   
+
+
+  
+
+    
    
    
    
