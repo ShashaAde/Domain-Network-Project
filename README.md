@@ -464,7 +464,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
     
   ![Screenshot 2024-11-24 183726](https://github.com/user-attachments/assets/5f339739-7042-4dfd-97ac-abf621d0a2c2)
 
-  Editied the Company Policy in Portfolio.INC to change the Password Policy (under the Computer Configuration's tab) to allow the minimum characters of a password to be 12. 
+  Edited the Company Policy in Portfolio.INC to change the Password Policy (under the Computer Configuration's tab) to allow the minimum characters of a password to be 12. 
   
   ![Screenshot 2024-11-24 184844](https://github.com/user-attachments/assets/e6286fe6-8f3e-464b-bd97-924b89b24951)
 
@@ -479,7 +479,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
   ![Screenshot 2024-11-24 190614](https://github.com/user-attachments/assets/22f2a892-2aaf-4bc4-83e3-e797b7f64983)
 
-  Enabled a policy to disable Microsoft Store under the Group Policy Manager Editor with the path of: Computer configuration > policies > administrative templates > windows       componets > Internet Explorer.
+  Enabled a policy to disable Microsoft Store under the Group Policy Manager Editor with the path of: Computer configuration > policies > administrative templates > windows       componets > Internet         Explorer.
   
   ![Screenshot 2024-11-24 193814](https://github.com/user-attachments/assets/7f24f933-bb2d-4072-a12c-906522e82cc5)
 
@@ -488,16 +488,50 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   ### Used group policies for network file share to make a secure drive-map for the domain controller and departments within the organization to share files.
 
-  Removed all groups form the file that I wanted to share 
-  
-  
+  ![Screenshot 2024-11-24 203856](https://github.com/user-attachments/assets/f6263b97-e3e2-42c8-8f6b-db316478ed9d)
 
+  Allowed sharing permissions to everyone om a file "Share" thorugh Advanced Sharing Permissions of folder properties.
+  -within that "Share" file I added department folders for: IT, CEO, Accounts and Sales.
   
+  ![Screenshot 2024-11-24 204238](https://github.com/user-attachments/assets/6ef3660a-c251-49e3-8289-90b854a77d3c)
 
+  Made a Organizational Unit for shared folders, where I assigned all users to a select gorup based off their department.
   
+  ![Screenshot 2024-11-24 204619](https://github.com/user-attachments/assets/1c470dab-8447-4b0c-b821-a73c6c6ce9e4)
+  
+  Gave sf-admins ownership of the "Share" file with full control, while domain users are given read & execute access. 
+  
+  ![Screenshot 2024-11-24 205519](https://github.com/user-attachments/assets/aa5597ff-da2f-4ac1-8e08-890d4bc81935)
 
+  Changed ownership to "sf-administrators", and disable inheritance for each subfolder in the shares folder, while giving each subcategory all permissions except file deleting, changing permissions and       the ability to take ownership.
+  - Also removed Domain Users from having any permissions. 
+
+  ![Screenshot 2024-11-24 210135](https://github.com/user-attachments/assets/d86173f3-c085-423e-b620-398996f3e15f)
+
+  Created a map drive with Group Policy Managment in the domain controller's tools tab
   
+  ![Screenshot 2024-11-24 210503](https://github.com/user-attachments/assets/29a9b83b-9aec-4572-9c0c-cd4805d2d949)
+
+  Edited the mapped-drive group policy to create a map dirve by navigating to: User Configuration > Preferences > Windows Settings > Drive Maps
+  
+  ![Screenshot 2024-11-24 210540](https://github.com/user-attachments/assets/7b1c0adb-7742-49ea-ad59-770a109ece91)
+
+  Created a Drive Map and using the path location of the "Shares" file
+  - Linked the GPO to the domain.
+
+  ## Results 
+  ![Screenshot 2024-11-24 211003](https://github.com/user-attachments/assets/1d6e8328-7ffa-4148-bc48-620661dfcab8)
+
+  On my workstation I can see the shared network file.
+  
+  ![Screenshot 2024-11-24 211119](https://github.com/user-attachments/assets/5d467d8a-acfa-402b-a1aa-f3112abcd250)
+
+  On my CEO account, I can only access the CEO folder
+  - This is what happens when trying to access another folder. 
    
+  ![Screenshot 2024-11-24 211138](https://github.com/user-attachments/assets/fa5189df-6af4-464e-b606-a38bddd4228e)
+
+  Here I am able to access the CEO folder, where I can do everything, but delete and take over files. 
 
 
 
