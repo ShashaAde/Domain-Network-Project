@@ -324,7 +324,8 @@ Allocated memory, and assigned processor cores to the virtual machine.
   Joined the workstation to the domain. 
 
 ### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
- ![Screenshot 2024-11-23 215517](https://github.com/user-attachments/assets/1faa15e7-c699-47cd-94aa-888987457e36)
+
+ ![389244565-1faa15e7-c699-47cd-94aa-888987457e36](https://github.com/user-attachments/assets/66dfa8e5-6176-4698-8e37-dfce82b8e26f)
 
  Accessed the DNS Manager thorugh the tools section of the Server Manager.
  
@@ -735,7 +736,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
    Edited the rsyslog file on my Ubuntu desktop to connect to my domain contoller. 
   
-   ![Screenshot 2024-11-25 013531](https://github.com/user-attachments/assets/0c850f92-81dd-4ac7-b1a0-d0f495c12fa6)
+   ![Screenshot 2024-11-25 013531](https://github.com/user-attachments/assets/e6d3c88a-8717-436c-885a-fe9c9f51f594)
 
    
    Told the rsyslog server where it can find the client at, and added other configurations at the bottom. 
