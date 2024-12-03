@@ -768,7 +768,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
    Moved into my log files I configured and listed all the files that my client is logging.
 
-   ### Result 
+   ### Results 
    
    ![Screenshot 2024-11-25 014435](https://github.com/user-attachments/assets/8ea8f7c8-9edd-4d0e-b496-e3c50634b447)
 
