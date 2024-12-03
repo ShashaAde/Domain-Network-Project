@@ -206,47 +206,49 @@ Allocated memory, and assigned processor cores to the virtual machine.
 ## Used network topology, commands, and concepts to connect each VM to the domain.
   Used ipconfig/ifconfig to get the Ips of each virtual machine.
   - Used sudo to install net-tools for Ubuntu desktop & server.
-    ```
-    sudo apt install net-tools
+    
+        sudo apt install net-tools
 
 ### Joined my Ubuntu desktop to the Domain 
 
   ![Screenshot 2024-11-23 234707](https://github.com/user-attachments/assets/efc38c49-f81e-42a8-95b0-d2d438cc068b)
 
   Added my domain IP as the DNS Server address for my Ubuntu desktop.
+    
+    
+    sudo service NetworkManager restart
 
-  sudo service NetworkManager restart
-
-  sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
+    sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir packagekit
 
   Installed realmd packages that allow my Ubuntu desktop to connect to my domain controller.
 
-  hostnamectl set-hostname ubuntu.portfolio.local
+    hostnamectl set-hostname ubuntu.portfolio.local
 
   Changed the host name on my Ubuntu desktop.
 
-  systemctl disable systemd-resolved.service
-  systemctl stop systemd-resolved.service
+    systemctl disable systemd-resolved.service
+    systemctl stop systemd-resolved.service
 
   Disableing the systemd resolve service, so our domain server can resolve the DNS. 
 
-   sudo nano /etc/resolv.conf
+     sudo nano /etc/resolv.conf
 
   ![Screenshot 2024-11-24 001829](https://github.com/user-attachments/assets/34e2b288-6a14-4f28-b7f4-88de32d1af3f)
 
   Configured the resolv.conf file to point to the domnain controller with nano. 
 
-  realm discover portfolio.local
+    realm discover portfolio.local
 
   ![Screenshot 2024-11-24 002936](https://github.com/user-attachments/assets/e4e687b3-251f-4e0d-8015-95b1450ee771)
 
   Checking if the Ubuntu desktop can discover the domain controller.
 
-  realm join -U Administrator portfolio.local
+    realm join -U Administrator portfolio.local
 
   Ran into a problem, where it said I didn't have the prober permissions to join.
     - After doing research I found that editing/creating a /etc/krb5.conf and adding the following worked:
-     [libdefaults]
+    
+    [libdefaults]
     default_realm = portfolio.local
     rdns = false
   
@@ -256,15 +258,15 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
 ### Joined my Ubuntu server to the Domain 
 
-  sudp apt update -y
+    sudp apt update -y
 
   - Making sure I have all the current packages updated.
 
-  sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir     packagekit
+        sudo apt install -y realmd libnss-sss libpam-sss sssd sssd-tools adcli samba-common-bin oddjob oddjob-mkhomedir     packagekit
 
   - Installed realmd packages that allow my Ubuntu desktop to connect to my domain controller.
 
-  sudo hostnamectl set-hostname ubntu-s.portfolio.local
+        sudo hostnamectl set-hostname ubntu-s.portfolio.local
 
   - Changed the host name of the Ubuntu server.
 
@@ -272,22 +274,22 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   - Checked to see if hostname changed.
 
-  systemctl disable systemd-resolved.service
-  systemctl stop systemd-resolved.service
+        systemctl disable systemd-resolved.service
+        systemctl stop systemd-resolved.service
 
   - Disableing the systemd resolve service, so our domain server can resolve the DNS. 
 
-  systemctl status systemd-resolved.service
+        systemctl status systemd-resolved.service
 
   - Checked to make sure the service is no longer running. 
 
-   sudo vim /etc/resolv.conf
+        sudo vim /etc/resolv.conf
  
   ![Screenshot 2024-11-24 013616](https://github.com/user-attachments/assets/bd2edc72-64db-46d4-bcd4-310c2827fd51)
 
   Configured the resolv.conf file to point to the domnain controller with vim. 
 
-  realm discover portfolio.local
+    realm discover portfolio.local
 
   ![Screenshot 2024-11-24 013843](https://github.com/user-attachments/assets/b411c205-6f3b-4545-8735-1e1f8d3cf892)
 
@@ -297,7 +299,8 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
    - Ran into the same problem that happened with the Ubuntu desktop, where it said I didn't have the proper permissions to join.
    - After repeating the troubleshooting process by editing/creating a /etc/krb5.conf and adding the request to join worked:
-     [libdefaults]
+
+    [libdefaults]
     default_realm = portfolio.local
     rdns = false
   
@@ -420,13 +423,13 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   Searched for Windows PowerShell in the Windows search bar.
     - Ran Windows PowerShell as administrator. 
 
-  Get-WindowsCapability -Online | ? Name -like 'OpenSSH.Client*'
+    Get-WindowsCapability -Online | ? Name -like 'OpenSSH.Client*'
   
   ![Screenshot 2024-11-24 161146](https://github.com/user-attachments/assets/16503570-7f19-4fd2-bd55-fd9952617a19)
 
   Checked to see if ssh was installed.
 
-  ssh shashaade@ubntu-s.portfolio.local 
+    ssh shashaade@ubntu-s.portfolio.local 
   
   ![Screenshot 2024-11-24 162416](https://github.com/user-attachments/assets/46d4365f-6e21-40d6-9cca-1b768a95cece)
 
@@ -438,7 +441,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   ### Used SSH to gain remote access between two Linux clients.
 
-  ssh shashaade@ubntu-s.portfolio.local 
+    ssh shashaade@ubntu-s.portfolio.local 
   
   ![Screenshot 2024-11-24 223950](https://github.com/user-attachments/assets/277ec7d5-e339-48d3-8c11-f6b8b9f6e3af)
 
@@ -456,21 +459,21 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
   Added a new user on the client.
 
-  net localgroup administrators user (testAdmin) /add
+    net localgroup administrators user (testAdmin) /add
 
   Added the user to the local client's andministration group.
 
   ## Ubuntu 
 
-  sudo adduser username (sha) 
+    sudo adduser username (sha) 
 
   Added a new user on the client.
 
-  sudo usermod -aG sudo username (sha)
+    sudo usermod -aG sudo username (sha)
 
   Added the user to the local client's andministration group.
   
-  net user
+    net user
   ![Screenshot 2024-11-24 212306](https://github.com/user-attachments/assets/50966798-e4dc-44ef-ab91-252ed1870ac2)
 
   Confirmed the user account was created on the client.
@@ -581,11 +584,11 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   Used Ubuntu's guide on how to Install and configure WordPress https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
   ### Installed Dependencies 
   
-  sudo apt update
+    sudo apt update
   
   Made sure my ubuntu was updated before installing packages in the CLI
 
-  sudo apt install apache2 \
+    sudo apt install apache2 \
                  ghostscript \
                  libapache2-mod-php \
                  mysql-server \
@@ -604,10 +607,10 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
    
    ### Installed WordPress
     
-   sudo mkdir -p /srv/www
-   sudo chown www-data: /srv/www
-   sudo apt install curl
-   curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
+     sudo mkdir -p /srv/www
+     sudo chown www-data: /srv/www
+     sudo apt install curl
+     curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
 
    Made a new directory for wordpress, and then changed the owner to Apache. 
    
@@ -617,7 +620,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
   ### Configured Apache for WordPress
   
-  <VirtualHost *:80>
+    <VirtualHost *:80>
       DocumentRoot /srv/www/wordpress
       <Directory /srv/www/wordpress>
           Options FollowSymLinks
@@ -629,70 +632,70 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
           Options FollowSymLinks
           Require all granted
       </Directory>
-  </VirtualHost>
+    </VirtualHost>
     
    Added configurations within the file above.
    
-   sudo a2ensite wordpress
-   systemctl reload apache2
+     sudo a2ensite wordpress
+     systemctl reload apache2
 
    Enabled the Wordpress site.
    
-   sudo a2enmod rewrite
-   systemctl restart apache2
+     sudo a2enmod rewrite
+     systemctl restart apache2
 
    Enabled a Apache module.
 
-   sudo a2dissite 000-default
-   systemctl reload apache2
+     sudo a2dissite 000-default
+     systemctl reload apache2
 
    Disabled the default webstie.
 
-   sudo service apache2 reload
+     sudo service apache2 reload
 
    Reloaded apache.
 
    ### Configured database
    
-   $ sudo mysql -u root
+     sudo mysql -u root
   
    ![Screenshot 2024-11-24 232806](https://github.com/user-attachments/assets/7c1a15c2-15ee-4298-8365-34617435f596)
 
    Opened MySQL database.
    
-   CREATE DATABASE wordpress;
+    CREATE DATABASE wordpress;
    
    Created a new database named "wordpress".
    
-   CREATE USER wordpress@localhost IDENTIFIED BY '<your-password(testing)>';  
+     CREATE USER wordpress@localhost IDENTIFIED BY '<your-password(testing)>';  
   
    Created a new user named "wordpress", and configured its password.
     
-   GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER ON wordpress.* TO wordpress@localhost;
+     GRANT SELECT,INSERT,UPDATE,DELETE,CREATE,DROP,ALTER ON wordpress.* TO wordpress@localhost;
 
    Gave permissions on the WordPress database.
    
-   FLUSH PRIVILEGES;
+     FLUSH PRIVILEGES;
   
    Updated MySQL permissions.
 
-   quit 
+     quit 
    
    Exited out of the database.
 
    ### Configured WordPress
 
-   cd /srv/www/wordpress/
+     cd /srv/www/wordpress/
    ![Screenshot 2024-11-24 233923](https://github.com/user-attachments/assets/302e3a2a-b86d-49a4-b8e1-6c0971f79bad)
  
    Moved into the wordpress directory.
    - ls displays a list of files in the current directory.
-     
-   sudo -u www-data cp wp-config-sample.php wp-config.php
+
+    sudo -u www-data cp wp-config-sample.php wp-config.php
   
    Copied a the sample file into "wp-config.php".
 
-   sudo -u www-data nano wp-config.php
+     sudo -u www-data nano wp-config.php
   
    ![Screenshot 2024-11-24 234909](https://github.com/user-attachments/assets/442c4053-4442-42c7-af34-89101ae0d7d6)
 
@@ -712,7 +715,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 ## Created an Ubuntu server for system logging of the domain server with syslog.
    ### Configured rsyslog
 
-   nano /etc/rsyslog.conf
+     nano /etc/rsyslog.conf
    
    Edited the rsyslog file. 
 
@@ -725,14 +728,14 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
    Added configurations that will send the logs to a designated area to be displayed by Hostname/Program
 
-   rsyslogd -f /etc/rsyslog.conf -N1
+     rsyslogd -f /etc/rsyslog.conf -N1
    ![Screenshot 2024-11-25 003402](https://github.com/user-attachments/assets/478aa63f-8274-4d3e-b486-9f42aa3a7de7)
 
    Checked for any configuration errors. 
 
    ### Configured client 
 
-   sudo nano /etc/rsyslog.conf
+     sudo nano /etc/rsyslog.conf
 
    Edited the rsyslog file on my Ubuntu desktop to connect to my domain contoller. 
   
@@ -742,7 +745,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
    Told the rsyslog server where it can find the client at, and added other configurations at the bottom. 
    - These configurations where from a youtube video found here: https://www.youtube.com/watch?v=mBJ8JfJnlXQ&t=199s
 
-   rsyslogd -f /etc/rsyslog.conf -N1
+         rsyslogd -f /etc/rsyslog.conf -N1
   
    ![Screenshot 2024-11-25 010147](https://github.com/user-attachments/assets/11fdac9a-f44a-40e5-bc3d-578190756660)
 
@@ -753,18 +756,18 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
    Checked to see if rsyslog's port (514 UDP) was up.
 
-   cd /var/log
+     cd /var/log
 
    Moved to the log directory.
 
-   ls
+     ls
    
    ![Screenshot 2024-11-25 014226](https://github.com/user-attachments/assets/3bed20a2-2287-4a56-bbad-ebcbde79d1d3)
 
    Listed all the files in the log directory.
 
-   cd/ubuntu-s 
-   ls
+     cd/ubuntu-s 
+     ls
 
    Moved into my log files I configured and listed all the files that my client is logging.
 
@@ -774,31 +777,31 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   ## Made a bash script that asks for a keyword to search for, then queries the logs for the key word.
   
-  cd/var/log 
+    cd/var/log 
 
   Moved to the log directory.
   
-  touch query_logs.sh
+    touch query_logs.sh
 
   Created the script file. 
 
-  nano query_logs.sh 
+    nano query_logs.sh 
 
   Edited the script file.
 
-  #!/bin/bash
+    #!/bin/bash
   
    read -p "Enter a keyword to search for in logs: " keyword
    
-   grep -ri "$keyword" /var/log 2>/dev/null || echo "No results found for '$keyword'."
+     grep -ri "$keyword" /var/log 2>/dev/null || echo "No results found for '$keyword'."
 
    Created a script to search the logs for a keyword that I typed in and then displays where the keyword was found. 
 
-   chmod +x search_logs.sh
+     chmod +x search_logs.sh
 
    Gave the script execute rights.
 
-   ./query_logs.sh
+     ./query_logs.sh
 
    Ran the bash script. 
 
