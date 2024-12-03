@@ -30,6 +30,8 @@ The objective of this project is to integrate and expand the networks of three m
   
 ## Steps
 
+[Go to Virtual Machine Installation and Operating Systems Setup](#Virtual-Machine-Installation-and-Operating-Systems-Setup)
+
 ## Virtual Machine Installation and Operating Systems Setup
 -Downloaded VMware Workstation 17 Player to create and run multiple virtual machines om.
 
