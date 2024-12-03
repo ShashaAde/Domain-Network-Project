@@ -17,7 +17,7 @@ The objective of this project is to integrate and expand the networks of three m
 
 ### Services/Tools Used
 - Cisco Packet Tracer to map out the logical layout of my network.
-- Wordpress to setup a online market place thorugh a LAMP server.
+- WordPress to setup an online market place through a LAMP server.
 - VMware to set up the servers and workstations.
 - Created domain and DNS zones for the VMs.
 - Used tools (ipconfig/ifconfig, ping) to assign IPs and test connectivity.
@@ -27,23 +27,24 @@ The objective of this project is to integrate and expand the networks of three m
 - Applied policies to manage security settings and restrictions.
 - Installed WordPress on Ubuntu with Apache and MySQL.
 - Wrote a script to search logs for specific domain and login activities.
-  
-  ## Tasks
 
-[Go to Virtual Machine Installation and Operating Systems Setup](#Virtual-Machine-Installation-and-Operating-Systems-Setup)
-[Go to Configuring Windows Server 2019 to a Domain](#Configuring-Windows-Server-2019-to-a-Domain)
-[Used Network Topology, Commands, and Concepts to Connect Each VM to the Domain](#Used-Network-Topology,-Commands,-and-Concepts-to-Connect-Each-VM-to-the-Domain)
-[Used Remote Desktop Connection to RDP from the domain Windows Server 2019 to the Workstation Windows 10 Pro](#Used-Remote-Desktop-Connection-to-RDP-from-the-Domain-Windows-Server-2019-to-the-Workstation-Windows-10-Pro)
-[Created Users from CMD/CLI and Gave Them, sudo/admin rights for Ubuntu and Windows](Created-Users-from-CMD/CLI-and-Gave-Them,-sudo/admin-rights-for-Ubuntu-and-Windows)
-[Set Up Multiple Accounts for the Window Pro 10 Workstation Through the Window Domain](Set-Up-Multiple-Accounts-for-the-Window-Pro-10-Workstation-Through-the-Window-Domain)
-[Used Active Directory and Group Policies to Manage Domain Accounts](Used-Active-Directory-and-Group-Policies-to-Manage-Domain-Accounts)
-[Created a Webpage by Setting Up WordPress With Linux Ubuntu Desktop](Created-a-Webpage-by-Setting-Up-WordPress-With-Linux-Ubuntu-Desktop)
-[Created an Ubuntu Server for System Logging of the Domain Server with Syslog](Created-an-Ubuntu-Server-for-System-Logging-of-the-Domain-Server-with-Syslog)
-[Made a Bash Script that Asks for a Keyword to Search for, then Queries the Logs for the Keyword](Made-a-Bash-Script-that-Asks-for-a-Keyword-to-Search-for,-then-Queries-the-Logs-for-the-Keyword)
+## Steps
 
+|  Tasks                                                                                                                                                                                                                     |
+|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Virtual Machine Installation and Operating Systems Setup](Virtual-Machine-Installation-and-Operating-Systems-Setup)|
+| Configured Windows Server 2019 to a Domain](Configured-Windows-Server-2019-to-a-Domain)|
+| [Used Network Topology, Commands, and Concepts to Connect Each VM to the Domain](Used-Network-Topology,-Commands,-and-Concepts-to-Connect-Each-VM-to-the-Domain)|
+| [Used Remote Desktop Connection to RDP from the Domain Windows Server 2019 to the Workstation Windows 10 Pro](Used-Remote-Desktop-Connection-to-RDP-from-the-Domain-Windows-Server-2019-to-the-Workstation-Windows-10-Pro)|
+| [Created Users from CMD/CLI and Gave Them, sudo/admin rights for Ubuntu and Windows](Created-Users-from-CMD/CLI-and-Gave-Them,-sudo/admin-rights-for-Ubuntu-and-Windows)|
+| [Set Up Multiple Accounts for the Window Pro 10 Workstation Through the Window Domain](Set-Up-Multiple-Accounts-for-the-Window-Pro-10-Workstation-Through-the-Window-Domain)|
+| [Used Active Directory and Group Policies to Manage Domain Accounts](Used-Active-Directory-and-Group-Policies-to-Manage-Domain-Accounts)|
+| [Created a Webpage by Setting Up WordPress With Linux Ubuntu Desktop](Created-a-Webpage-by-Setting-Up-WordPress-With-Linux-Ubuntu-Desktop)|
+| [Created an Ubuntu Server for System Logging of the Domain Server with Syslog](Created-an-Ubuntu-Server-for-System-Logging-of-the-Domain-Server-with-Syslog)|
+| [Made a Bash Script that Asks for a Keyword to Search for, then Queries the Logs for the Keyword](Made-a-Bash-Script-that-Asks-for-a-Keyword-to-Search-for,-then-Queries-the-Logs-for-the-Keyword)|
 
 ## Virtual Machine Installation and Operating Systems Setup
--Downloaded VMware Workstation 17 Player to create and run multiple virtual machines om.
+-Downloaded VMware Workstation 17 Player to create and run multiple virtual machines on.
 
 -Downloaded the needed ISO files to run on VMware, which included: Windows Server 2019, Windows, Ubuntu Live Server, and Ubuntu. 
 
@@ -54,7 +55,7 @@ The objective of this project is to integrate and expand the networks of three m
   
   ![Screenshot 2024-11-23 172302](https://github.com/user-attachments/assets/84713e12-d589-4b8a-a10b-448862247b45)
 
-Selected the Windows Server 2019 operating system as a host on this particular virtual machine.
+Selected the Windows Server 2019 operating system as a host on this virtual machine.
 
   ![Screenshot 2024-11-23 172719](https://github.com/user-attachments/assets/8fb8627d-4b5f-48c2-83c7-6719c5f6984e)
 
@@ -66,7 +67,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   ![Screenshot 2024-11-23 174231](https://github.com/user-attachments/assets/8b8d4a25-fb4f-4312-a338-a265639bc5d9)
 
-  To avoid the VMware disk error, after creating the virtual machine I then addded in the ISO file for Windows Server 2019.
+  To avoid the VMware disk error, after creating the virtual machine I then added in the ISO file for Windows Server 2019.
   
   ![Screenshot 2024-11-23 174355](https://github.com/user-attachments/assets/93984941-1fe0-4cef-b919-b0d1ba7e0fff)
   
@@ -74,17 +75,17 @@ Allocated memory, and assigned processor cores to the virtual machine.
   
   ![Screenshot 2024-11-23 174444](https://github.com/user-attachments/assets/8bedcf7b-77f5-4ec8-acc6-66ff5923778e)
 
-  Chose the Standard Windows Server 2019 Operating System as the operating system to be installed on this particular machine.
+  Chose the Standard Windows Server 2019 Operating System as the operating system to be installed on this virtual machine.
   
   ![Screenshot 2024-11-23 174539](https://github.com/user-attachments/assets/49fc3eb7-abdf-4e0f-8c9e-6a4b842238c1)
 
-  Partitioned the hard drive to provide overall performance and scallability options.
-    - The installation proccess completed and I was sent to the start up log-in interface.
+  Partitioned the hard drive to provide overall performance and scalability options.
+    - The installation process completed, and I was sent to the startup log-in interface.
 
 ### Windows 10 Pro (Workstation) Setup
   ![Screenshot 2024-11-23 180354](https://github.com/user-attachments/assets/1471993e-ef37-4b0c-a988-4471e3aba989)
 
-  Selected the Windows ISO file for installation into the Virtual Machine set aside for my worksations.  
+  Selected the Windows ISO file for installation into the Virtual Machine set aside for my workstations.  
   
   ![Screenshot 2024-11-23 180457](https://github.com/user-attachments/assets/7b4b4dfa-cc1e-4e85-9631-878f8fd4fd7a)
 
@@ -100,11 +101,11 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   ![Screenshot 2024-11-23 181438](https://github.com/user-attachments/assets/03084196-5a90-4bd1-b047-37d3d82ae8c4)
 
-  Chose Windows 10 Pro as the operating system to be installed on this particular virtual machine.
+  Choose Windows 10 Pro as the operating system to be installed on this virtual machine.
 
   ![Screenshot 2024-11-23 181531](https://github.com/user-attachments/assets/d0d4afcd-c138-425d-9f60-71db056c0681)
 
-  Partitioned the hard drive to provide overall performance and scallability options. 
+  Partitioned the hard drive to provide overall performance and scalability options. 
   
   ![Screenshot 2024-11-23 181554](https://github.com/user-attachments/assets/fb14bbf5-78d3-4cd3-9209-dfcf6e462b18)
 
@@ -112,18 +113,18 @@ Allocated memory, and assigned processor cores to the virtual machine.
   
   ![Screenshot 2024-11-23 182845](https://github.com/user-attachments/assets/27f4adfa-a8ef-4b38-85d5-bf80ea3463e5)
 
-  Once the operating system compelted installing, I began to personalize the virtual machine's microsoft account. 
+  Once the operating system completed installing, I began to personalize the virtual machine's Microsoft account. 
   
   ![Screenshot 2024-11-23 183107](https://github.com/user-attachments/assets/fc7f3e1c-3eca-4ecb-aa20-686ec5d4ccff)
 
   Set up a account that will be a administrator for this virtual machine. 
-  - The installation proccess completed and I was sent to the start up log-in interface.
+  - The installation process  completed, and I was sent to the startup log-in interface.
 
 
 ### Ubuntu Server Setup
   ![Screenshot 2024-11-23 174653](https://github.com/user-attachments/assets/f904ec06-e32a-4dea-9708-4ae51806eeab)
 
-  Selected the Ubuntu Server ISO file for installation into the Virtual Machine set aside for my worksations.  
+  Selected the Ubuntu Server ISO file for installation into the Virtual Machine set aside for my workstations.  
   
   ![Screenshot 2024-11-23 174741](https://github.com/user-attachments/assets/b64023a9-cec9-4e84-a98f-c288bb6392e9)
 
@@ -135,7 +136,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
   
   ![Screenshot 2024-11-23 180805](https://github.com/user-attachments/assets/280e6faa-146a-4d93-8443-7d0dd60bc79f)
 
-  Started the installation proccess of the Ubuntu Server operating system.
+  Started the installation process of the Ubuntu Server operating system.
   
   ![Screenshot 2024-11-23 180952](https://github.com/user-attachments/assets/3c16a7a7-a94d-471d-978a-f7458c96f317)
 
@@ -148,13 +149,13 @@ Allocated memory, and assigned processor cores to the virtual machine.
   ![Screenshot 2024-11-23 181121](https://github.com/user-attachments/assets/db5d4064-0a40-4c88-bc6b-3af1c19bede4)
 
   Installed the operating system with the setting preferences that I chose.
-    - The installation proccess completed and I was sent to the start up log-in interface.
+    - The installation process completed, and I was sent to the startup log-in interface.
 
 
 ### Ubuntu Setup
   ![Screenshot 2024-11-23 200344](https://github.com/user-attachments/assets/9f319339-32f7-4cd1-abca-5cfe5fc0745c)
 
-  Selected the Ubuntu ISO file for installation into the Virtual Machine set aside for my worksations.  
+  Selected the Ubuntu ISO file for installation into the Virtual Machine set aside for my workstations.  
 
   ![Screenshot 2024-11-23 175054](https://github.com/user-attachments/assets/d9bd9c96-d768-40e8-8b29-909d4521990f)
 
@@ -166,22 +167,22 @@ Allocated memory, and assigned processor cores to the virtual machine.
   
   ![Screenshot 2024-11-23 175613](https://github.com/user-attachments/assets/3c3fc66f-d621-4055-845a-ad0dd6111ab6)
 
-  Chose the deafult installation of the Ubuntu operating system. 
+  Choose the default installation of the Ubuntu operating system. 
   
   ![Screenshot 2024-11-23 180151](https://github.com/user-attachments/assets/1330af93-9df2-47b3-9291-d22f8fe02645)
 
   Set up a user account for Ubuntu.
-    - The installation proccess completed and I was sent to the start up log-in interface.
+    - The installation process completed, and I was sent to the startup log-in interface.
 
-## Configuring Windows Server 2019 to a Domain 
-  ### Careating an Active Directory domain
+## Configured Windows Server 2019 to a Domain 
+  ### Created an Active Directory domain
   ![Screenshot 2024-11-23 203245](https://github.com/user-attachments/assets/45fe1317-d947-4a8d-b4df-b8a1901ebf08)
 
   Used the command line to find my network settings and configuration
 
   ![Screenshot 2024-11-23 204956](https://github.com/user-attachments/assets/2a54c1ec-087e-428a-8061-018e0a31dedb)
 
-  Added a static IP addres with the alternate DNS server addres being the same, to allow this host to be promoted to Domain. 
+  Added a static IP address with the alternate DNS server address being the same, to allow this host to be promoted to Domain. 
 
   ![Screenshot 2024-11-23 205447](https://github.com/user-attachments/assets/d73e319c-b2fa-4bc4-b2b3-c902f5ff1670)
 
@@ -193,7 +194,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   ![Screenshot 2024-11-23 205558](https://github.com/user-attachments/assets/6c10bc20-d2af-47ec-98ff-65c8ce243982)
 
-  Doubble checked to make sure Group Policy Managment features were still selected.
+  Double checked to make sure Group Policy Management features were still selected.
 
   ![Screenshot 2024-11-23 205701](https://github.com/user-attachments/assets/824396b3-5686-4291-8abf-e768a9ef000b)
 
@@ -209,7 +210,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   ![Screenshot 2024-11-23 211319](https://github.com/user-attachments/assets/f3cf5889-943a-413b-8917-949734ba5c68)
 
-  Left the rest of the settings as default when proceding with the domain promoiton.
+  Left the rest of the settings as default when proceeding with the domain promotion.
     
   - Allowed the promotion operation to complete.
     
@@ -242,13 +243,13 @@ Allocated memory, and assigned processor cores to the virtual machine.
     systemctl disable systemd-resolved.service
     systemctl stop systemd-resolved.service
 
-  Disableing the systemd resolve service, so our domain server can resolve the DNS. 
+  Disabling the systemd resolve service, so our domain server can resolve the DNS. 
 
      sudo nano /etc/resolv.conf
 
   ![Screenshot 2024-11-24 001829](https://github.com/user-attachments/assets/34e2b288-6a14-4f28-b7f4-88de32d1af3f)
 
-  Configured the resolv.conf file to point to the domnain controller with nano. 
+  Configured the resolv.conf file to point to the domain controller with nano. 
 
     realm discover portfolio.local
 
@@ -300,7 +301,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
  
   ![Screenshot 2024-11-24 013616](https://github.com/user-attachments/assets/bd2edc72-64db-46d4-bcd4-310c2827fd51)
 
-  Configured the resolv.conf file to point to the domnain controller with vim. 
+  Configured the resolv.conf file to point to the domain controller with vim. 
 
     realm discover portfolio.local
 
@@ -339,11 +340,11 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
   Joined the workstation to the domain. 
 
-### Created foward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
+### Created forward lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
 
  ![389244565-1faa15e7-c699-47cd-94aa-888987457e36](https://github.com/user-attachments/assets/66dfa8e5-6176-4698-8e37-dfce82b8e26f)
 
- Accessed the DNS Manager thorugh the tools section of the Server Manager.
+ Accessed the DNS Manager through the tools section of the Server Manager.
  
  ![Screenshot 2024-11-23 215951](https://github.com/user-attachments/assets/4d2b3342-33c9-40b6-ab22-319be5640f39)
 
@@ -362,7 +363,7 @@ Added a new host (PW) to resolve a name to its IP.
 
  ### Created reverse lookup zones for the Windows Pro, and Ubuntu VMs to add to my domain 
 
-  Accessed the DNS Manager thorugh the tools section of the Server Manager.
+  Accessed the DNS Manager through the tools section of the Server Manager.
  
 ![Screenshot 2024-11-23 222719](https://github.com/user-attachments/assets/d9cf1e96-a94e-422b-8b4c-1e6dc622445a)
 
@@ -396,13 +397,13 @@ This is the result of the forward lookup zone.
 
 This is the result of the reverse lookup zone.
 
-A problem I am running into right now is that my workstation can reach my domain, but my domain can't find the workstaion.
+A problem I am running into right now is that my workstation can reach my domain, but my domain can't find the workstation.
   - I then tried my Ubuntu desktop virtual machine and my domain was able to find it. 
-  - I trouble shooted this problem by turning off the workstations firewall, and that let me know were to find a solution.
+  - I troubleshot this problem by turning off the workstations firewall, and that let me know were to find a solution.
   
 ![Screenshot 2024-11-23 231808](https://github.com/user-attachments/assets/34ba4c14-35f5-4b6c-9915-e3b5ff3d9219)
 
-To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incomming ping requests from all IPs.
+To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incoming ping requests from all IPs.
   - I was then able to ping the workstation.
 
 ## Used Remote Desktop Connection to RDP from the Domain Windows Server 2019 to the Workstation Windows 10 Pro
@@ -431,7 +432,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   ## Used SSH to Gain Remote Access to Linux Clients from a Windows client, as well as from One Linux Client to Another 
 
-  ### Used Powershell on a Windows client to SSH into Linux clients.
+  ### Used PowerShell on a Windows client to SSH into Linux clients.
 
   Searched for Windows PowerShell in the Windows search bar.
     - Ran Windows PowerShell as administrator. 
@@ -446,7 +447,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
   ![Screenshot 2024-11-24 162416](https://github.com/user-attachments/assets/46d4365f-6e21-40d6-9cca-1b768a95cece)
 
-  After entering my Ubuntu server's login credentials, I was able to sucessfully SSH into it.
+  After entering my Ubuntu server's login credentials, I was able to successfully SSH into it.
    
   ![Screenshot 2024-11-24 225216](https://github.com/user-attachments/assets/96ada3a8-a0d8-43c0-a17a-5cab9a6916f2)
 
@@ -458,7 +459,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
   ![Screenshot 2024-11-24 223950](https://github.com/user-attachments/assets/277ec7d5-e339-48d3-8c11-f6b8b9f6e3af)
 
-  After entering my Ubuntu server's login credentials, I was able to sucessfully SSH into it.
+  After entering my Ubuntu server's login credentials, I was able to successfully SSH into it.
   
   ![Screenshot 2024-11-24 224756](https://github.com/user-attachments/assets/4e908bcb-6cfd-4ed0-b65a-51b9596b9d04)
 
@@ -495,7 +496,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
   ![Screenshot 2024-11-24 180441](https://github.com/user-attachments/assets/03a7b669-5963-40e3-bb7d-beb4f683116a)
 
-  Created and organized unit with sub-organized units of containing different departments of a company within the Ative Directory Users and Comptuers tool settings.
+  Created and organized unit with sub-organized units of containing different departments of a company within the Active Directory Users and Computers tool settings.
 
   ![Screenshot 2024-11-24 181150](https://github.com/user-attachments/assets/78de467f-96ea-48d3-9e00-c744c3153b52)
 
@@ -503,7 +504,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
   ![Screenshot 2024-11-24 181312](https://github.com/user-attachments/assets/6aff5f79-100e-466c-8e3d-f62111a94690)
 
-  Made security gorups for each department.
+  Made security groups for each department.
   
   ![Screenshot 2024-11-24 181537](https://github.com/user-attachments/assets/e91bd76e-a588-4dcd-8407-02019c3a4138)
 
@@ -519,7 +520,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
   ![Screenshot 2024-11-24 184621](https://github.com/user-attachments/assets/d3eded6b-0649-4f70-b52f-f9d1fae514a7)
 
-  Created a new policy for my domain controller from the Group Policy Managment in the Tools tab.
+  Created a new policy for my domain controller from the Group Policy Management in the Tools tab.
   - This policy is will be applied to those in Portfolio.INC.
     
   ![Screenshot 2024-11-24 183726](https://github.com/user-attachments/assets/5f339739-7042-4dfd-97ac-abf621d0a2c2)
@@ -528,18 +529,18 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
   ![Screenshot 2024-11-24 184844](https://github.com/user-attachments/assets/e6286fe6-8f3e-464b-bd97-924b89b24951)
 
-  When trying to change the password with anything lower than 12 chracters, this is the message that was shown. 
+  When trying to change the password with anything lower than 12 characters, this is the message that was shown. 
 
   ### Created a group policy through software restriction policies in the security settings to restrict all users in the domain form opening Internet Explorer.
   
   ![Screenshot 2024-11-24 190142](https://github.com/user-attachments/assets/47b45f40-6537-467b-a821-318c7efcb3e4)
 
-  Created a new policy for my domain controller from the Group Policy Managment in the Tools tab.
+  Created a new policy for my domain controller from the Group Policy Management in the Tools tab.
   - This policy is will be applied to all users in the domain.
   
   ![Screenshot 2024-11-24 190614](https://github.com/user-attachments/assets/22f2a892-2aaf-4bc4-83e3-e797b7f64983)
 
-  Enabled a policy to disable Microsoft Store under the Group Policy Manager Editor with the path of: Computer configuration > policies > administrative templates > windows       componets > Internet         Explorer.
+  Enabled a policy to disable Microsoft Store under the Group Policy Manager Editor with the path of: Computer configuration > policies > administrative templates > windows components  > Internet Explorer.
   
   ![Screenshot 2024-11-24 193814](https://github.com/user-attachments/assets/7f24f933-bb2d-4072-a12c-906522e82cc5)
 
@@ -550,12 +551,12 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   ![Screenshot 2024-11-24 203856](https://github.com/user-attachments/assets/f6263b97-e3e2-42c8-8f6b-db316478ed9d)
 
-  Allowed sharing permissions to everyone om a file "Share" thorugh Advanced Sharing Permissions of folder properties.
+  Allowed sharing permissions to everyone om a file "Share" through Advanced Sharing Permissions of folder properties.
   -within that "Share" file I added department folders for: IT, CEO, Accounts and Sales.
   
   ![Screenshot 2024-11-24 204238](https://github.com/user-attachments/assets/6ef3660a-c251-49e3-8289-90b854a77d3c)
 
-  Made a Organizational Unit for shared folders, where I assigned all users to a select gorup based off their department.
+  Made a Organizational Unit for shared folders, where I assigned all users to a select group based off their department.
   
   ![Screenshot 2024-11-24 204619](https://github.com/user-attachments/assets/1c470dab-8447-4b0c-b821-a73c6c6ce9e4)
   
@@ -568,11 +569,11 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   ![Screenshot 2024-11-24 210135](https://github.com/user-attachments/assets/d86173f3-c085-423e-b620-398996f3e15f)
 
-  Created a map drive with Group Policy Managment in the domain controller's tools tab
+  Created a map drive with Group Policy Management in the domain controller's tools tab
   
   ![Screenshot 2024-11-24 210503](https://github.com/user-attachments/assets/29a9b83b-9aec-4572-9c0c-cd4805d2d949)
 
-  Edited the mapped-drive group policy to create a map dirve by navigating to: User Configuration > Preferences > Windows Settings > Drive Maps
+  Edited the mapped-drive group policy to create a map drive by navigating to: User Configuration > Preferences > Windows Settings > Drive Maps
   
   ![Screenshot 2024-11-24 210540](https://github.com/user-attachments/assets/7b1c0adb-7742-49ea-ad59-770a109ece91)
 
@@ -625,7 +626,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
      sudo apt install curl
      curl https://wordpress.org/latest.tar.gz | sudo -u www-data tar zx -C /srv/www
 
-   Made a new directory for wordpress, and then changed the owner to Apache. 
+   Made a new directory for WordPress, and then changed the owner to Apache. 
    
    sudo nano /etc/apache2/sites-available/wordpress.conf
    
@@ -662,7 +663,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
      sudo a2dissite 000-default
      systemctl reload apache2
 
-   Disabled the default webstie.
+   Disabled the default website.
 
      sudo service apache2 reload
 
@@ -701,7 +702,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
      cd /srv/www/wordpress/
    ![Screenshot 2024-11-24 233923](https://github.com/user-attachments/assets/302e3a2a-b86d-49a4-b8e1-6c0971f79bad)
  
-   Moved into the wordpress directory.
+   Moved into the WordPress directory.
    - ls displays a list of files in the current directory.
 
     sudo -u www-data cp wp-config-sample.php wp-config.php
@@ -712,8 +713,8 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
    ![Screenshot 2024-11-24 234909](https://github.com/user-attachments/assets/442c4053-4442-42c7-af34-89101ae0d7d6)
 
-   Editied the "wp-config.php" file 
-   - Intered my database name (wordpress), database user (wordpress) and password (testing) into the file.
+   Editing the "wp-config.php" file 
+   - Entered my database name (WordPress), database user (WordPress) and password (testing) into the file.
 
    ### Configure WordPress
    
@@ -750,13 +751,13 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
      sudo nano /etc/rsyslog.conf
 
-   Edited the rsyslog file on my Ubuntu desktop to connect to my domain contoller. 
+   Edited the rsyslog file on my Ubuntu desktop to connect to my domain controller. 
   
    ![Screenshot 2024-11-25 013531](https://github.com/user-attachments/assets/e6d3c88a-8717-436c-885a-fe9c9f51f594)
 
    
    Told the rsyslog server where it can find the client at, and added other configurations at the bottom. 
-   - These configurations where from a youtube video found here: https://www.youtube.com/watch?v=mBJ8JfJnlXQ&t=199s
+   - These configurations where from a YouTube video found here: https://www.youtube.com/watch?v=mBJ8JfJnlXQ&t=199s
 
          rsyslogd -f /etc/rsyslog.conf -N1
   
