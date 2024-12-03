@@ -16,9 +16,9 @@ The objective of this project is to integrate and expand the networks of three m
 - Web Development and Hosting                  
 
 ### Services/Tools Used
-- Cisco Packet Tracer to map out the logical layout of my network
-- Wordpress to setup a online market place thorugh a LAMP server
-- VMware to set up the servers and workstations
+- Cisco Packet Tracer to map out the logical layout of my network.
+- Wordpress to setup a online market place thorugh a LAMP server.
+- VMware to set up the servers and workstations.
 - Created domain and DNS zones for the VMs.
 - Used tools (ipconfig/ifconfig, ping) to assign IPs and test connectivity.
 - Enabled RDP for remote access to Windows Pro.
@@ -28,9 +28,19 @@ The objective of this project is to integrate and expand the networks of three m
 - Installed WordPress on Ubuntu with Apache and MySQL.
 - Wrote a script to search logs for specific domain and login activities.
   
-## Steps
+  ## Tasks
 
 [Go to Virtual Machine Installation and Operating Systems Setup](#Virtual-Machine-Installation-and-Operating-Systems-Setup)
+[Go to Configuring Windows Server 2019 to a Domain](#Configuring-Windows-Server-2019-to-a-Domain)
+[Used Network Topology, Commands, and Concepts to Connect Each VM to the Domain](#Used-Network-Topology,-Commands,-and-Concepts-to-Connect-Each-VM-to-the-Domain)
+[Used Remote Desktop Connection to RDP from the domain Windows Server 2019 to the Workstation Windows 10 Pro](#Used-Remote-Desktop-Connection-to-RDP-from-the-Domain-Windows-Server-2019-to-the-Workstation-Windows-10-Pro)
+[Created Users from CMD/CLI and Gave Them, sudo/admin rights for Ubuntu and Windows](Created-Users-from-CMD/CLI-and-Gave-Them,-sudo/admin-rights-for-Ubuntu-and-Windows)
+[Set Up Multiple Accounts for the Window Pro 10 Workstation Through the Window Domain](Set-Up-Multiple-Accounts-for-the-Window-Pro-10-Workstation-Through-the-Window-Domain)
+[Used Active Directory and Group Policies to Manage Domain Accounts](Used-Active-Directory-and-Group-Policies-to-Manage-Domain-Accounts)
+[Created a Webpage by Setting Up WordPress With Linux Ubuntu Desktop](Created-a-Webpage-by-Setting-Up-WordPress-With-Linux-Ubuntu-Desktop)
+[Created an Ubuntu Server for System Logging of the Domain Server with Syslog](Created-an-Ubuntu-Server-for-System-Logging-of-the-Domain-Server-with-Syslog)
+[Made a Bash Script that Asks for a Keyword to Search for, then Queries the Logs for the Keyword](Made-a-Bash-Script-that-Asks-for-a-Keyword-to-Search-for,-then-Queries-the-Logs-for-the-Keyword)
+
 
 ## Virtual Machine Installation and Operating Systems Setup
 -Downloaded VMware Workstation 17 Player to create and run multiple virtual machines om.
@@ -163,7 +173,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
   Set up a user account for Ubuntu.
     - The installation proccess completed and I was sent to the start up log-in interface.
 
-## Configuring Windows Server 2019 to a domain 
+## Configuring Windows Server 2019 to a Domain 
   ### Careating an Active Directory domain
   ![Screenshot 2024-11-23 203245](https://github.com/user-attachments/assets/45fe1317-d947-4a8d-b4df-b8a1901ebf08)
 
@@ -206,7 +216,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
   ![Screenshot 2024-11-23 212225](https://github.com/user-attachments/assets/d1d3c307-542e-4eb6-840e-c4e3add71ca1)
   The server has now been promoted. 
   
-## Used network topology, commands, and concepts to connect each VM to the domain.
+## Used Network Topology, Commands, and Concepts to Connect Each VM to the Domain
   Used ipconfig/ifconfig to get the Ips of each virtual machine.
   - Used sudo to install net-tools for Ubuntu desktop & server.
     
@@ -395,7 +405,7 @@ A problem I am running into right now is that my workstation can reach my domain
 To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incomming ping requests from all IPs.
   - I was then able to ping the workstation.
 
-## Used Remote Desktop Connection to RDP from the domain (Windows Server 2019) to the workstation (Windows 10 Pro)
+## Used Remote Desktop Connection to RDP from the Domain Windows Server 2019 to the Workstation Windows 10 Pro
   ### Turning on Remote desktop access for the workstation
   
   ![Screenshot 2024-11-24 154426](https://github.com/user-attachments/assets/5ff10613-4189-4d08-b6c0-2106cbe699b1)
@@ -419,7 +429,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   The domain controller was able to successfully RDP into the workstation. 
 
-  ## Used SSH to gain remote access to Linux clients (Ubuntu desktop & Ubuntu Server) from a Windows client (Windows 10 Pro), from one Linux client to another. 
+  ## Used SSH to Gain Remote Access to Linux Clients from a Windows client, as well as from One Linux Client to Another 
 
   ### Used Powershell on a Windows client to SSH into Linux clients.
 
@@ -455,7 +465,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   This is the same process for using SSH to get into the Ubuntu desktop.
 
   
-## Created Users from CMD/CLI and gave them, sudo/admin rights for Ubuntu and Windows.
+## Created Users from CMD/CLI and Gave Them, sudo/admin rights for Ubuntu and Windows
   ### Windows 
 
   net user username (testAdmin) password (justforfun12) /add 
@@ -466,7 +476,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Added the user to the local client's andministration group.
 
-  ## Ubuntu 
+  ### Ubuntu 
 
     sudo adduser username (sha) 
 
@@ -481,7 +491,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Confirmed the user account was created on the client.
 
-## Set up multiple accounts for the Window Pro 10 (workstation) through the Window Domain.
+## Set Up Multiple Accounts for the Window Pro 10 Workstation Through the Window Domain
   
   ![Screenshot 2024-11-24 180441](https://github.com/user-attachments/assets/03a7b669-5963-40e3-bb7d-beb4f683116a)
 
@@ -503,7 +513,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Accessed the accounts (on the workstation) that were made by the domain controller.
 
-## Used active directory and group policies to manage Domain accounts.
+## Used Active Directory and Group Policies to Manage Domain Accounts
 
   ### Created a group policy through account policies in the security settings to limit the character length of a password to 12 minimum for users on the Windows Pro system
   
@@ -553,7 +563,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
   
   ![Screenshot 2024-11-24 205519](https://github.com/user-attachments/assets/aa5597ff-da2f-4ac1-8e08-890d4bc81935)
 
-  Changed ownership to "sf-administrators", and disable inheritance for each subfolder in the shares folder, while giving each subcategory all permissions except file deleting, changing permissions and       the ability to take ownership.
+  Changed ownership to "sf-administrators", and disable inheritance for each subfolder in the shares folder, while giving each subcategory all permissions except file deleting, changing permissions and the ability to take ownership.
   - Also removed Domain Users from having any permissions. 
 
   ![Screenshot 2024-11-24 210135](https://github.com/user-attachments/assets/d86173f3-c085-423e-b620-398996f3e15f)
@@ -583,7 +593,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
   Here I am able to access the CEO folder, where I can do everything, but delete and take over files. 
 
-## Created a webpage by setting up WordPress with Linux (Ubuntu desktop).
+## Created a Webpage by Setting Up WordPress With Linux Ubuntu Desktop
   Used Ubuntu's guide on how to Install and configure WordPress https://ubuntu.com/tutorials/install-and-configure-wordpress#1-overview
   ### Installed Dependencies 
   
@@ -715,7 +725,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
 
    Successfully installed WordPress through apache for my Linux client.
 
-## Created an Ubuntu server for system logging of the domain server with syslog.
+## Created an Ubuntu Server for System Logging of the Domain Server with Syslog
    ### Configured rsyslog
 
      nano /etc/rsyslog.conf
@@ -778,7 +788,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incommin
    
    ![Screenshot 2024-11-25 014435](https://github.com/user-attachments/assets/8ea8f7c8-9edd-4d0e-b496-e3c50634b447)
 
-  ## Made a bash script that asks for a keyword to search for, then queries the logs for the key word.
+  ## Made a Bash Script that Asks for a Keyword to Search for, then Queries the Logs for the Keyword
   
     cd/var/log 
 
