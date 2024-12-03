@@ -449,15 +449,15 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incoming
 
   After entering my Ubuntu server's login credentials, I was able to successfully SSH into it.
    
-  ![Screenshot 2024-11-24 225216](https://github.com/user-attachments/assets/96ada3a8-a0d8-43c0-a17a-5cab9a6916f2)
+  ![389360932-96ada3a8-a0d8-43c0-a17a-5cab9a6916f2](https://github.com/user-attachments/assets/d4c9b288-de1f-4561-bca5-71eec236a4cf)
 
   This is the same process for using SSH to get into the Ubuntu desktop.
 
   ### Used SSH to gain remote access between two Linux clients.
 
     ssh shashaade@ubntu-s.portfolio.local 
-  
-  ![Screenshot 2024-11-24 223950](https://github.com/user-attachments/assets/277ec7d5-e339-48d3-8c11-f6b8b9f6e3af)
+    
+  ![389357744-277ec7d5-e339-48d3-8c11-f6b8b9f6e3af](https://github.com/user-attachments/assets/f6557379-40a8-4464-adf8-fdc9b776bfa7)
 
   After entering my Ubuntu server's login credentials, I was able to successfully SSH into it.
   
