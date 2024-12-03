@@ -8,7 +8,8 @@ The objective of this project is to integrate and expand the networks of three m
 
 - System Administration and Virtualization       
 - Active Directory (AD) and Domain Configuration 
-- Networking and Connectivity                   
+- Networking and Connectivity
+- User Creation                 
 - Local Users and Groups Management             
 - Group Policy Management                      
 - Linux System Administration                  
