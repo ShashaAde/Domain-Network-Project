@@ -32,7 +32,7 @@ The objective of this project is to integrate and expand the networks of three m
 
 |  Tasks                                                                                                                                                                                                                     |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [Virtual Machine Installation and Operating Systems Setup](Virtual-Machine-Installation-and-Operating-Systems-Setup)|
+| [Virtual Machine Installation and Operating Systems Setup](#virtual-machine-installation-and-operating-systems-setup)|
 | [Configured Windows Server 2019 to a Domain](Configured-Windows-Server-2019-to-a-Domain)|
 | [Used Network Topology, Commands, and Concepts to Connect Each VM to the Domain](Used-Network-Topology,-Commands,-and-Concepts-to-Connect-Each-VM-to-the-Domain)|
 | [Used Remote Desktop Connection to RDP from the Domain Windows Server 2019 to the Workstation Windows 10 Pro](Used-Remote-Desktop-Connection-to-RDP-from-the-Domain-Windows-Server-2019-to-the-Workstation-Windows-10-Pro)|
