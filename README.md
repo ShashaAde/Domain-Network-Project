@@ -34,14 +34,14 @@ The objective of this project is to integrate and expand the networks of three m
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [Virtual Machine Installation and Operating Systems Setup](#virtual-machine-installation-and-operating-systems-setup)|
 | [Configured Windows Server 2019 to a Domain](#configured-windows-server-2019-to-a-domain)|
-| [Used Network Topology, Commands, and Concepts to Connect Each VM to the Domain](#used-network-topology,-commands,-and-concepts-to-connect-each-vm-to-the-domain)|
+| [Used Network Topology, Commands, and Concepts to Connect Each VM to the Domain](#used-network-topology-commands-and-concepts-to-connect-each-vm-to-the-domain)|
 | [Used Remote Desktop Connection to RDP from the Domain Windows Server 2019 to the Workstation Windows 10 Pro](#used-remote-desktop-connection-to-rdp-from-the-domain-windows-server-2019-to-the-workstation-windows-10-pro)|
-| [Created Users from CMD/CLI and Gave Them, sudo/admin rights for Ubuntu and Windows](#created-users-from-cmd/cli-and-gave-them,-sudo/admin-rights-for-ubuntu-and-windows)|
+| [Created Users from CMD/CLI and Gave Them, sudo/admin rights for Ubuntu and Windows](#created-users-from-cmdcli-and-gave-them-sudoadmin-rights-for-ubuntu-and-windows)|
 | [Set Up Multiple Accounts for the Window Pro 10 Workstation Through the Window Domain](#set-up-multiple-accounts-for-the-window-pro-10-workstation-through-the-window-domain)|
 | [Used Active Directory and Group Policies to Manage Domain Accounts](#used-active-directory-and-group-policies-to-manage-domain-accounts)|
 | [Created a Webpage by Setting Up WordPress With Linux Ubuntu Desktop](#created-a-webpage-by-setting-up-wordpress-with-linux-ubuntu-desktop)|
 | [Created an Ubuntu Server for System Logging of the Domain Server with Syslog](#created-an-ubuntu-server-for-system-logging-of-the-domain-server-with-syslog)|
-| [Made a Bash Script that Asks for a Keyword to Search for, then Queries the Logs for the Keyword](#made-a-bash-script-that-asks-for-a-keyword-to-search-for,-then-queries-the-logs-for-the-keyword)|
+| [Made a Bash Script that Asks for a Keyword to Search for, then Queries the Logs for the Keyword](#made-a-bash-script-that-asks-for-a-keyword-to-search-for-then-queries-the-logs-for-the-keyword)|
 
 ## Virtual Machine Installation and Operating Systems Setup
 -Downloaded VMware Workstation 17 Player to create and run multiple virtual machines on.
