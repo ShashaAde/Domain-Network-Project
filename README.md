@@ -469,7 +469,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incoming
 ## Created Users from CMD/CLI and Gave Them, sudo/admin rights for Ubuntu and Windows
   ### Windows 
 
-  net user username (testAdmin) password (justforfun12) /add 
+    net user username (testAdmin) password (justforfun12) /add 
   
   Added a new user on the client.
 
