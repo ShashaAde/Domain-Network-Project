@@ -540,7 +540,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incoming
   
   ![Screenshot 2024-11-24 190614](https://github.com/user-attachments/assets/22f2a892-2aaf-4bc4-83e3-e797b7f64983)
 
-  Enabled a policy to disable Microsoft Store under the Group Policy Manager Editor with the path of: Computer configuration > policies > administrative templates > windows components  > Internet Explorer.
+  Enabled a policy to disable Microsoft Edge (Internet Explorer) under the Group Policy Manager Editor with the path of: Computer configuration > policies > administrative templates > windows components  > Internet Explorer.
   
   ![Screenshot 2024-11-24 193814](https://github.com/user-attachments/assets/7f24f933-bb2d-4072-a12c-906522e82cc5)
 
