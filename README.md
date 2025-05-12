@@ -628,7 +628,7 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incoming
 
    Made a new directory for WordPress, and then changed the owner to Apache. 
    
-   sudo nano /etc/apache2/sites-available/wordpress.conf
+     sudo nano /etc/apache2/sites-available/wordpress.conf
    
    Created a file to host the Apache site for WordPress. 
   
