@@ -804,8 +804,11 @@ To solve this problem, I made a Inbound Protocol ICMPv4 rule , to allow incoming
   Edited the script file.
 
     #!/bin/bash
-  
+   ...
+    
      read -p "Enter a keyword to search for in logs: " keyword
+
+  ...
    
      grep -ri "$keyword" /var/log 2>/dev/null || echo "No results found for '$keyword'."
 
