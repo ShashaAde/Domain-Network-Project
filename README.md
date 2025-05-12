@@ -259,7 +259,7 @@ Allocated memory, and assigned processor cores to the virtual machine.
 
     realm join -U Administrator portfolio.local
 
-  Ran into a problem, where it said I didn't have the prober permissions to join.
+  Ran into a problem, where it said I didn't have the proper permissions to join.
     - After doing research I found that editing/creating a /etc/krb5.conf and adding the following worked:
     
     [libdefaults]
